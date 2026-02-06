@@ -229,19 +229,29 @@ const Navbar = () => {
           <button
             type="button"
             aria-label={isMenuOpen ? "Close menu" : "Open menu"}
-            className={`nav-menu-btn ${isMenuOpen ? "open" : ""}`}
+            className="group relative flex items-center justify-center w-12 h-12 md:w-14 md:h-14 rounded-full bg-white/5 backdrop-blur-md border border-white/10 hover:border-[#ffcb40] transition-all duration-300 shadow-lg hover:shadow-[#ffcb40]/20 z-[60]"
             ref={menuToggleBtnRef}
             onClick={() => setIsMenuOpen((prev) => !prev)}
           >
-            <div className="nav-hamburger-container">
-              <div className="nav-hamburger-wrapper">
-                <span className="nav-hamburger-line nav-hamburger-line-top"></span>
-                <span className="nav-hamburger-line nav-hamburger-line-middle"></span>
-                <span className="nav-hamburger-line nav-hamburger-line-bottom"></span>
-              </div>
+            <div className="relative w-5 h-4 flex flex-col justify-between items-center overflow-hidden transition-all duration-300 transform group-hover:scale-110">
+              <span
+                className={`w-full h-0.5 bg-white rounded-full transition-all duration-300 origin-center group-hover:bg-[#ffcb40] ${
+                  isMenuOpen ? "absolute top-1/2 -translate-y-1/2 rotate-45" : "relative"
+                }`}
+              ></span>
+              <span
+                className={`w-full h-0.5 bg-white rounded-full transition-all duration-300 group-hover:bg-[#ffcb40] ${
+                  isMenuOpen ? "opacity-0" : "relative"
+                }`}
+              ></span>
+              <span
+                className={`w-full h-0.5 bg-white rounded-full transition-all duration-300 origin-center group-hover:bg-[#ffcb40] ${
+                  isMenuOpen ? "absolute top-1/2 -translate-y-1/2 -rotate-45" : "relative"
+                }`}
+              ></span>
             </div>
-            <div className="nav-menu-glow"></div>
-            {isMenuOpen && <div className="nav-menu-pulse"></div>}
+            {/* Glow effect */}
+            <div className="absolute inset-0 rounded-full bg-[#ffcb40] opacity-0 group-hover:opacity-10 transition-opacity duration-300 blur-md -z-10"></div>
           </button>
         )}
 
@@ -249,13 +259,10 @@ const Navbar = () => {
         {isRegistrationPage && (
           <Link
             href="/"
-            className="group relative inline-flex items-center justify-center px-3 py-1.5 md:px-6 md:py-3 text-xs md:text-sm font-bold text-white bg-gradient-to-r from-[#004CF1] via-[#00ECEC] to-[#00B836] rounded-full overflow-hidden transition-all duration-300 hover:scale-105 hover:shadow-lg hover:shadow-[#00B836]/25"
+            className="group relative inline-flex items-center justify-center px-3 py-1.5 md:px-6 md:py-3 text-xs md:text-sm font-bold text-[#0f172a] bg-gradient-to-r from-[#b4860b] via-[#ffcb40] to-[#fbf5b7] rounded-full overflow-hidden transition-all duration-300 hover:scale-105 shadow-[0_0_20px_rgba(255,203,64,0.4)] hover:shadow-[0_0_30px_rgba(255,203,64,0.6)]"
             style={{ minWidth: "unset" }}
           >
-            <span
-              className="relative z-10 flex items-center gap-1 md:gap-2 drop-shadow-lg"
-              style={{ textShadow: "0 1px 2px rgba(0,0,0,0.8)" }}
-            >
+            <span className="relative z-10 flex items-center gap-1 md:gap-2">
               <svg
                 className="w-3 h-3 md:w-4 md:h-4"
                 fill="none"
@@ -271,8 +278,7 @@ const Navbar = () => {
               </svg>
               Back to Home
             </span>
-            <div className="absolute inset-0 bg-gradient-to-r from-[#b4860b] via-[#ffcb40] to-[#0f2b69] opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-            <div className="absolute inset-0 bg-white/20 blur-xl group-hover:blur-2xl transition-all duration-300"></div>
+            <div className="absolute inset-0 bg-white/20 blur-xl opacity-0 group-hover:opacity-100 transition-all duration-300"></div>
           </Link>
         )}
       </nav>

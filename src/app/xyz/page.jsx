@@ -141,7 +141,7 @@ function RegPage() {
                     href="tel:+94715704449"
                     className="text-[#00B836] hover:text-[#008A28] font-medium text-lg hover:underline transition-colors"
                   >
-                    +94 70 224 3799 - Uvindu
+                    +94 70 216 3398 - Kavin
                   </a>
                 </div>
               </div>

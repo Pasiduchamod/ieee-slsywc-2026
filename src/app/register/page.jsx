@@ -13,6 +13,7 @@ import {
   Phone,
   CheckCircle,
 } from "lucide-react";
+import AnimatedBackground from "../components/ui/AnimatedBackground";
 
 function RegPage() {
   const { isRegistrationOpen, isRegistrationEnded } = useRegistrationStatus();
@@ -20,62 +21,8 @@ function RegPage() {
   return (
     <div className="min-h-screen relative overflow-hidden pt-[10vh]">
       {/* Animated Background (from Hero/About) */}
-      <div className="absolute inset-0 w-full h-full z-0">
-        {/* Base gradient background */}
-        <div
-          className="absolute inset-0 w-full h-full"
-          style={{
-            background:
-              "radial-gradient(ellipse at 60% 40%, #1A2A6C 0%, #0A0F1C 80%), linear-gradient(120deg, #0A0F1C 0%, #232526 100%)",
-            transition: "opacity 0.3s linear",
-          }}
-        ></div>
-
-        {/* Animated gradient overlay */}
-        <div
-          className="absolute inset-0 w-full h-full hero-gradient-fade"
-          style={{
-            background:
-              "radial-gradient(circle at 70% 30%, #014034 0%, #0A0F1C 70%), linear-gradient(120deg, #0A0F1C 0%, #00B836 100%)",
-            opacity: 0,
-            transition: "opacity 0.3s linear",
-          }}
-        ></div>
-
-        {/* Animated Grid Pattern */}
-        <div className="absolute inset-0 grid-pattern"></div>
-
-        {/* Floating Geometric Shapes */}
-        <div className="absolute inset-0 floating-shapes">
-          <div className="shape shape-1"></div>
-          <div className="shape shape-2"></div>
-          <div className="shape shape-3"></div>
-          <div className="shape shape-4"></div>
-          <div className="shape shape-5"></div>
-          <div className="shape shape-6"></div>
-        </div>
-
-        {/* Animated Light Rays */}
-        <div className="absolute inset-0 light-rays">
-          <div className="ray ray-1"></div>
-          <div className="ray ray-2"></div>
-          <div className="ray ray-3"></div>
-        </div>
-
-        {/* Animated Wave Effect */}
-        <div className="absolute inset-0 wave-container">
-          <div className="wave wave-1"></div>
-          <div className="wave wave-2"></div>
-          <div className="wave wave-3"></div>
-        </div>
-
-        {/* Glowing Orbs */}
-        <div className="absolute inset-0 glowing-orbs">
-          <div className="orb orb-1"></div>
-          <div className="orb orb-2"></div>
-          <div className="orb orb-3"></div>
-        </div>
-      </div>
+      {/* Animated Background from Hero */}
+      <AnimatedBackground showNeuralNetwork={true} />
       {/* Main Content: Countdown or Registration UI */}
       {isRegistrationEnded ? (
         <div className="container mx-auto px-4 py-8 relative z-10">
@@ -157,31 +104,31 @@ function RegPage() {
             {/* Header */}
             <div className="text-center mb-12">
               <div className="mb-6">
-                <div className="inline-flex items-center justify-center w-20 h-20 bg-white rounded-full shadow-lg mb-4">
-                  <Award className="w-10 h-10 text-purple-600" />
+                <div className="inline-flex items-center justify-center w-20 h-20 bg-gradient-to-br from-[#1a2a6c] to-[#0f172a] border border-[#ffcb40] rounded-full shadow-[0_0_20px_rgba(255,203,64,0.3)] mb-4">
+                  <Award className="w-10 h-10 text-[#ffcb40]" />
                 </div>
               </div>
               <h1 className="text-4xl md:text-6xl font-bold text-white mb-6 leading-tight">
-                <span className="bg-clip-text text-transparent bg-gradient-to-r from-[#00ff99] via-[#00aaff] to-[#00ffea] animate-gradient-move">
+                <span className="bg-clip-text text-transparent bg-gradient-to-r from-[#ffcb40] via-[#fbf5b7] to-[#b4860b] animate-gradient-move">
                   IEEE SLSYWC 2026
                 </span>
               </h1>
-              <p className="text-xl md:text-2xl text-purple-100 mb-4">
-                <span className="bg-clip-text text-transparent bg-gradient-to-r from-[#00ff99] via-[#00aaff] to-[#00ffea] animate-gradient-move">
-                  Welcome to the flagship event of IEEE Sri Lanka Section
+              <p className="text-xl md:text-2xl text-[#b8eaff] mb-4">
+                <span className="bg-clip-text text-transparent bg-gradient-to-r from-[#eafaff] via-[#b8eaff] to-[#eafaff]">
+                  Welcome to the flagship event of IEEE Sri Lanka Section
                 </span>
               </p>
-              <div className="flex flex-wrap justify-center gap-4 text-sm md:text-base text-purple-200">
+              <div className="flex flex-wrap justify-center gap-4 text-sm md:text-base text-[#b8eaff]/80">
                 <div className="flex items-center">
-                  <Calendar className="w-4 h-4 mr-2" />
+                  <Calendar className="w-4 h-4 mr-2 text-[#ffcb40]" />
                   September 26/ 27/ 28, 2026
                 </div>
                 <div className="flex items-center">
-                  <MapPin className="w-4 h-4 mr-2" />
+                  <MapPin className="w-4 h-4 mr-2 text-[#ffcb40]" />
                   Jie Jie Beach, Panadura
                 </div>
                 <div className="flex items-center">
-                  <Users className="w-4 h-4 mr-2" />
+                  <Users className="w-4 h-4 mr-2 text-[#ffcb40]" />
                   250 Delegates Expected
                 </div>
               </div>
@@ -193,9 +140,9 @@ function RegPage() {
             </div>
 
             {/* Contact Information */}
-            <div className="bg-[rgba(10,16,26,0.97)] border border-[#0038b8] rounded-2xl shadow-xl p-8 backdrop-blur-md">
+            <div className="bg-[#0f172a]/90 border border-[#ffcb40]/30 rounded-2xl shadow-[0_8px_32px_rgba(0,0,0,0.3)] p-8 backdrop-blur-md">
               <div className="text-center mb-8">
-                <h3 className="text-3xl font-bold text-[#b8eaff] mb-4">
+                <h3 className="text-3xl font-bold text-[#ffcb40] mb-4">
                   Need Help?
                 </h3>
                 <p className="text-lg text-[#b8eaff]">
@@ -206,23 +153,23 @@ function RegPage() {
 
               <div className="grid md:grid-cols-2 gap-8">
                 <div className="text-center">
-                  <div className="w-16 h-16 bg-gradient-to-r from-[#004CF1] to-[#00ECEC] rounded-full flex items-center justify-center mx-auto mb-4 shadow-lg">
-                    <Mail className="w-8 h-8 text-white" />
+                  <div className="w-16 h-16 bg-gradient-to-r from-[#b4860b] to-[#ffcb40] rounded-full flex items-center justify-center mx-auto mb-4 shadow-lg text-[#0f172a]">
+                    <Mail className="w-8 h-8" />
                   </div>
                   <h4 className="text-xl font-semibold text-[#b8eaff] mb-2">
                     Email Support
                   </h4>
                   <a
                     href="mailto:ieeeslsywc@gmail.com"
-                    className="text-[#00ecec] hover:text-[#00b836] font-medium text-lg hover:underline transition-colors"
+                    className="text-[#ffcb40] hover:text-white font-medium text-lg hover:underline transition-colors"
                   >
                     ieeeslsywc@gmail.com
                   </a>
                 </div>
 
                 <div className="text-center">
-                  <div className="w-16 h-16 bg-gradient-to-r from-[#00B836] to-[#008A28] rounded-full flex items-center justify-center mx-auto mb-4 shadow-lg">
-                    <Phone className="w-8 h-8 text-white" />
+                  <div className="w-16 h-16 bg-gradient-to-r from-[#b4860b] to-[#ffcb40] rounded-full flex items-center justify-center mx-auto mb-4 shadow-lg text-[#0f172a]">
+                    <Phone className="w-8 h-8" />
                   </div>
                   <h4 className="text-xl font-semibold text-[#b8eaff] mb-2">
                     Phone Support
@@ -230,9 +177,9 @@ function RegPage() {
                   <div className="flex flex-col justify-center items-center">
                     <a
                       href="tel:+94715704449"
-                      className="text-[#00b836] hover:text-[#00ecec] font-medium text-lg hover:underline transition-colors"
+                      className="text-[#ffcb40] hover:text-white font-medium text-lg hover:underline transition-colors"
                     >
-                      +94 70 224 3799 - Uvindu
+                      +94 70 216 3398 - Kavin
                     </a>
                   </div>
                 </div>

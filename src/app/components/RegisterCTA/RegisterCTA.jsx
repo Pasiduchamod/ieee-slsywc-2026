@@ -199,24 +199,9 @@ const RegisterCTA = () => {
                 <span>Registration Closed</span>
               </div>
             ) : isRegistrationOpen ? (
-              <a
-                href="/register"
-                className="group relative inline-flex items-center gap-3 bg-gradient-to-r from-[#004CF1] to-[#00ECEC] text-white font-bold px-12 py-6 rounded-full text-lg transition-all duration-300 hover:scale-105 shadow-[0_0_20px_rgba(0,236,236,0.4)] hover:shadow-[0_0_40px_rgba(0,236,236,0.6)]"
-              >
-                <svg
-                  className="w-6 h-6 transition-transform duration-300 group-hover:rotate-90"
-                  fill="none"
-                  stroke="currentColor"
-                  viewBox="0 0 24 24"
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth={2}
-                    d="M12 6v6m0 0v6m0-6h6m-6 0H6"
-                  />
-                </svg>
-                <span className="tracking-wide">Register Now</span>
+              <a href="/register" className="register-button">
+                <span className="button-text">Register Now</span>
+                <div className="button-glow"></div>
               </a>
             ) : (
               <div className="relative group p-[2px] rounded-full bg-gradient-to-r from-[#ffcb40] via-[#b4860b] to-[#ffcb40] bg-[length:200%_auto] animate-gradient-move">
@@ -263,6 +248,98 @@ const RegisterCTA = () => {
           </div>
         </div>
       </div>
+
+      <style jsx>{`
+        .register-button {
+          position: relative;
+          display: inline-flex;
+          align-items: center;
+          justify-content: center;
+          padding: 1.25rem 3.5rem;
+          font-size: 1.25rem;
+          font-weight: 700;
+          color: #ffcb40;
+          background: rgba(16, 24, 40, 0.6);
+          backdrop-filter: blur(12px);
+          border: 1px solid rgba(255, 203, 64, 0.3);
+          border-radius: 50px;
+          text-decoration: none;
+          overflow: hidden;
+          transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+          box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2),
+            inset 0 0 0 1px rgba(255, 203, 64, 0.1);
+          letter-spacing: 0.05em;
+          text-transform: uppercase;
+          margin-bottom: 0.5rem;
+        }
+
+        .register-button:hover {
+          transform: translateY(-2px);
+          background: rgba(16, 24, 40, 0.8);
+          border-color: #ffcb40;
+          color: #0f172a;
+          box-shadow: 0 0 20px rgba(255, 203, 64, 0.4),
+            0 0 40px rgba(255, 203, 64, 0.2),
+            inset 0 0 0 1px rgba(255, 203, 64, 0.5);
+        }
+
+        .register-button::before {
+          content: "";
+          position: absolute;
+          inset: 0;
+          background: linear-gradient(
+            90deg,
+            #b4860b,
+            #ffcb40,
+            #fbf5b7,
+            #ffcb40,
+            #b4860b
+          );
+          background-size: 200% auto;
+          opacity: 0;
+          transition: opacity 0.4s ease;
+          z-index: 0;
+          animation: shine 3s linear infinite;
+        }
+
+        .register-button:hover::before {
+          opacity: 1;
+        }
+
+        @keyframes shine {
+          to {
+            background-position: 200% center;
+          }
+        }
+
+        .button-text {
+          position: relative;
+          z-index: 2;
+          text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+        }
+
+        .button-glow {
+          position: absolute;
+          top: 0;
+          left: -100%;
+          width: 50%;
+          height: 100%;
+          background: linear-gradient(
+            90deg,
+            transparent,
+            rgba(255, 255, 255, 0.4),
+            transparent
+          );
+          transform: skewX(-25deg);
+          transition: 0.5s;
+          z-index: 1;
+        }
+
+        .register-button:hover .button-glow {
+          left: 150%;
+          transition: 0.7s ease-in-out;
+        }
+      `}</style>
 
       {/* Floating Action Elements */}
       {/* <div className="absolute bottom-8 right-8">
