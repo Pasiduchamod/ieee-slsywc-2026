@@ -10,6 +10,7 @@ import Team from "./components/Team";
 import Sponsorships from "./components/Sponsorships";
 import Sponsors from "./components/Sponsors";
 
+
 import RegisterCTA from "./components/RegisterCTA/RegisterCTA";
 import Footer from "./components/Footer/Footer";
 
