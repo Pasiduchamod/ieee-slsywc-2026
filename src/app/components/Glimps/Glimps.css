@@ -42,7 +42,7 @@
   top: 0px;
   width: calc(100% - 4em);
   height: 150px;
-  border: 0.2em solid #00ecec;
+  border: 0.2em solid #ffcb40;
   border-radius: 1em;
   overflow: hidden;
   display: none;
@@ -94,8 +94,8 @@
   border-radius: 2em;
   overflow: hidden;
   background: rgba(44, 62, 80, 0.85);
-  border: 2px solid #00ecec55;
-  box-shadow: 0 4px 32px 0 #004cf144;
+  border: 2px solid #ffcb4055;
+  box-shadow: 0 4px 32px 0 #ffcb4033;
   transform: translate(-50%, -50%);
 }
 

@@ -229,19 +229,29 @@ const Navbar = () => {
           <button
             type="button"
             aria-label={isMenuOpen ? "Close menu" : "Open menu"}
-            className={`nav-menu-btn ${isMenuOpen ? "open" : ""}`}
+            className="group relative flex items-center justify-center w-12 h-12 md:w-14 md:h-14 rounded-full bg-white/5 backdrop-blur-md border border-white/10 hover:border-[#ffcb40] transition-all duration-300 shadow-lg hover:shadow-[#ffcb40]/20 z-[60]"
             ref={menuToggleBtnRef}
             onClick={() => setIsMenuOpen((prev) => !prev)}
           >
-            <div className="nav-hamburger-container">
-              <div className="nav-hamburger-wrapper">
-                <span className="nav-hamburger-line nav-hamburger-line-top"></span>
-                <span className="nav-hamburger-line nav-hamburger-line-middle"></span>
-                <span className="nav-hamburger-line nav-hamburger-line-bottom"></span>
-              </div>
+            <div className="relative w-5 h-4 flex flex-col justify-between items-center overflow-hidden transition-all duration-300 transform group-hover:scale-110">
+              <span
+                className={`w-full h-0.5 bg-white rounded-full transition-all duration-300 origin-center group-hover:bg-[#ffcb40] ${
+                  isMenuOpen ? "absolute top-1/2 -translate-y-1/2 rotate-45" : "relative"
+                }`}
+              ></span>
+              <span
+                className={`w-full h-0.5 bg-white rounded-full transition-all duration-300 group-hover:bg-[#ffcb40] ${
+                  isMenuOpen ? "opacity-0" : "relative"
+                }`}
+              ></span>
+              <span
+                className={`w-full h-0.5 bg-white rounded-full transition-all duration-300 origin-center group-hover:bg-[#ffcb40] ${
+                  isMenuOpen ? "absolute top-1/2 -translate-y-1/2 -rotate-45" : "relative"
+                }`}
+              ></span>
             </div>
-            <div className="nav-menu-glow"></div>
-            {isMenuOpen && <div className="nav-menu-pulse"></div>}
+            {/* Glow effect */}
+            <div className="absolute inset-0 rounded-full bg-[#ffcb40] opacity-0 group-hover:opacity-10 transition-opacity duration-300 blur-md -z-10"></div>
           </button>
         )}
 

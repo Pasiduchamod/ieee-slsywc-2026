@@ -82,7 +82,7 @@ function Sponsorships() {
                 We are grateful for the support of our sponsors and partners who
                 make this event possible
               </p>
-              <div className="w-24 h-1 bg-gradient-to-r from-[#004CF1] to-[#00ECEC] rounded-full mx-auto mt-6"></div>
+              <div className="w-24 h-1 bg-gradient-to-r from-[#bf953f] via-[#fcf6ba] to-[#b38728] rounded-full mx-auto mt-6"></div>
             </Copy>
           </div>
 
@@ -95,7 +95,7 @@ function Sponsorships() {
               >
                 {sponsorships.map((sponsorship, index) => (
                   <div key={index} className="flex-shrink-0 mx-8 group">
-                    <div className="bg-[#10182a]/80 backdrop-blur-sm rounded-xl p-6 shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-2 border border-[#00ECEC]/20 hover:border-[#00ECEC]/40 min-h-[120px] min-w-[200px] flex items-center justify-center">
+                    <div className="bg-[#10182a]/80 backdrop-blur-sm rounded-xl p-6 shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-2 border border-[#ffcb40]/20 hover:border-[#ffcb40]/40 min-h-[120px] min-w-[200px] flex items-center justify-center">
                       <img
                         src={`/Sponsorship logos/${sponsorship}`}
                         alt={`Sponsorship ${index + 1}`}
@@ -110,7 +110,7 @@ function Sponsorships() {
                     key={`duplicate-${index}`}
                     className="flex-shrink-0 mx-8 group"
                   >
-                    <div className="bg-[#10182a]/80 backdrop-blur-sm rounded-xl p-6 shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-2 border border-[#00ECEC]/20 hover:border-[#00ECEC]/40 min-h-[120px] min-w-[200px] flex items-center justify-center">
+                    <div className="bg-[#10182a]/80 backdrop-blur-sm rounded-xl p-6 shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-2 border border-[#ffcb40]/20 hover:border-[#ffcb40]/40 min-h-[120px] min-w-[200px] flex items-center justify-center">
                       <img
                         src={`/Sponsorship logos/${sponsorship}`}
                         alt={`Sponsorship ${index + 1}`}
@@ -132,7 +132,7 @@ function Sponsorships() {
               >
                 {sponsorships.slice(0, 8).map((sponsorship, index) => (
                   <div key={index} className="flex-shrink-0 mx-4 group">
-                    <div className="bg-[#10182a]/80 backdrop-blur-sm rounded-lg p-4 shadow-md hover:shadow-lg transition-all duration-300 hover:-translate-y-1 border border-[#00ECEC]/20 hover:border-[#00ECEC]/40 min-h-[80px] min-w-[120px] flex items-center justify-center">
+                    <div className="bg-[#10182a]/80 backdrop-blur-sm rounded-lg p-4 shadow-md hover:shadow-lg transition-all duration-300 hover:-translate-y-1 border border-[#ffcb40]/20 hover:border-[#ffcb40]/40 min-h-[80px] min-w-[120px] flex items-center justify-center">
                       <img
                         src={`/Sponsorship logos/${sponsorship}`}
                         alt={`Sponsorship ${index + 1}`}
@@ -147,7 +147,7 @@ function Sponsorships() {
                     key={`duplicate-${index}`}
                     className="flex-shrink-0 mx-4 group"
                   >
-                    <div className="bg-[#10182a]/80 backdrop-blur-sm rounded-lg p-4 shadow-md hover:shadow-lg transition-all duration-300 hover:-translate-y-1 border border-[#00ECEC]/20 hover:border-[#00ECEC]/40 min-h-[80px] min-w-[120px] flex items-center justify-center">
+                    <div className="bg-[#10182a]/80 backdrop-blur-sm rounded-lg p-4 shadow-md hover:shadow-lg transition-all duration-300 hover:-translate-y-1 border border-[#ffcb40]/20 hover:border-[#ffcb40]/40 min-h-[80px] min-w-[120px] flex items-center justify-center">
                       <img
                         src={`/Sponsorship logos/${sponsorship}`}
                         alt={`Sponsorship ${index + 1}`}
@@ -166,7 +166,7 @@ function Sponsorships() {
               >
                 {sponsorships.slice(8).map((sponsorship, index) => (
                   <div key={index} className="flex-shrink-0 mx-4 group">
-                    <div className="bg-[#10182a]/80 backdrop-blur-sm rounded-lg p-4 shadow-md hover:shadow-lg transition-all duration-300 hover:-translate-y-1 border border-[#00ECEC]/20 hover:border-[#00ECEC]/40 min-h-[80px] min-w-[120px] flex items-center justify-center">
+                    <div className="bg-[#10182a]/80 backdrop-blur-sm rounded-lg p-4 shadow-md hover:shadow-lg transition-all duration-300 hover:-translate-y-1 border border-[#ffcb40]/20 hover:border-[#ffcb40]/40 min-h-[80px] min-w-[120px] flex items-center justify-center">
                       <img
                         src={`/Sponsorship logos/${sponsorship}`}
                         alt={`Sponsorship ${index + 9}`}
@@ -181,7 +181,7 @@ function Sponsorships() {
                     key={`duplicate-${index}`}
                     className="flex-shrink-0 mx-4 group"
                   >
-                    <div className="bg-[#10182a]/80 backdrop-blur-sm rounded-lg p-4 shadow-md hover:shadow-lg transition-all duration-300 hover:-translate-y-1 border border-[#00ECEC]/20 hover:border-[#00ECEC]/40 min-h-[80px] min-w-[120px] flex items-center justify-center">
+                    <div className="bg-[#10182a]/80 backdrop-blur-sm rounded-lg p-4 shadow-md hover:shadow-lg transition-all duration-300 hover:-translate-y-1 border border-[#ffcb40]/20 hover:border-[#ffcb40]/40 min-h-[80px] min-w-[120px] flex items-center justify-center">
                       <img
                         src={`/Sponsorship logos/${sponsorship}`}
                         alt={`Sponsorship ${index + 9}`}

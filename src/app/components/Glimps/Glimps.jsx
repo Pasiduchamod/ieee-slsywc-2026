@@ -231,7 +231,7 @@ const Glimps = () => {
             <h2 className="text-4xl md:text-7xl font-bold text-white">
               Glimpse from 2025
             </h2>
-            <div className="w-24 h-1 bg-gradient-to-r from-[#ffcb40] to-[#198371] rounded-full mx-auto mt-6"></div>
+            <div className="w-24 h-1 bg-gradient-to-r from-[#bf953f] via-[#fcf6ba] to-[#b38728] rounded-full mx-auto mt-6"></div>
           </Copy>
         </div>
         {workItems.map((item, idx) => (
