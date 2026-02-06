@@ -8,13 +8,14 @@ import "./Preloader.css";
 const Preloader = () => {
   const [isLoading, setIsLoading] = useState(true);
   const [progress, setProgress] = useState(0);
+  const [displayText, setDisplayText] = useState("IEEE SLSYWC 2026");
   const [currentText, setCurrentText] = useState(0);
   const preloaderRef = useRef(null);
   const curtainLeftRef = useRef(null);
   const curtainRightRef = useRef(null);
   const contentRef = useRef(null);
   const bgRef = useRef(null);
-  const textRef = useRef(null);
+  // const textRef = useRef(null); // Text ref no longer needed
 
   const loadingTexts = [
     "Initializing IEEE Experience...",
@@ -25,20 +26,22 @@ const Preloader = () => {
   ];
 
   // Scramble text effect helper
-  const scrambleText = (textElement, finalText) => {
+  const scrambleText = (finalText) => {
     const chars = "ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789@#$%&";
     let iterations = 0;
     
     const interval = setInterval(() => {
-      textElement.innerText = finalText
-        .split("")
-        .map((letter, index) => {
-          if (index < iterations) {
-            return finalText[index];
-          }
-          return chars[Math.floor(Math.random() * chars.length)];
-        })
-        .join("");
+      setDisplayText(
+        finalText
+          .split("")
+          .map((letter, index) => {
+            if (index < iterations) {
+              return finalText[index];
+            }
+            return chars[Math.floor(Math.random() * chars.length)];
+          })
+          .join("")
+      );
       
       if (iterations >= finalText.length) {
         clearInterval(interval);
@@ -50,9 +53,7 @@ const Preloader = () => {
 
   useEffect(() => {
     // Initial scramble effect for title
-    if (textRef.current) {
-      scrambleText(textRef.current, "IEEE SLSYWC 2026");
-    }
+    scrambleText("IEEE SLSYWC 2026");
 
     // Simulate loading progress
     const progressInterval = setInterval(() => {
@@ -205,8 +206,8 @@ const Preloader = () => {
         {/* Title with Typing Effect */}
         <div className="title-container">
           <h1 className="main-title">
-            <span ref={textRef} className="block text-4xl md:text-6xl font-black tracking-tighter text-white mb-2 font-mono">
-              IEEE SLSYWC 2026
+            <span className="block text-4xl md:text-6xl font-black tracking-tighter text-white mb-2 font-mono">
+              {displayText}
             </span>
           </h1>
           <p className="subtitle text-sm md:text-lg text-white/60 tracking-widest uppercase">
