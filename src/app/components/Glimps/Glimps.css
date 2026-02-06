@@ -1,0 +1,250 @@
+/* Glimps (Featured Work) Component Styles - Project Compatible */
+
+@keyframes gradient-move {
+  0%,
+  100% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+}
+.glimps-featured-work {
+  position: relative;
+  width: 100vw;
+  height: 100svh;
+  overflow: hidden;
+  /* background removed to allow Neural Network integration */
+  color: #eafaff;
+  font-family: "rader", sans-serif;
+  display: block;
+}
+
+.glimps-featured-titles {
+  position: relative;
+  width: 500vw;
+  height: 100svh;
+  display: flex;
+  will-change: transform;
+}
+
+.glimps-featured-title-wrapper {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1em;
+}
+
+.glimps-featured-title-img {
+  position: relative;
+  top: 0px;
+  width: calc(100% - 4em);
+  height: 150px;
+  border: 0.2em solid #00ecec;
+  border-radius: 1em;
+  overflow: hidden;
+  display: none;
+}
+
+.glimps-featured-title-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.glimps-featured-title {
+  text-align: center;
+  transform: translateY(-0.5em);
+  font-size: 2.5rem;
+  font-family: "rader", sans-serif;
+  font-style: italic;
+  text-transform: uppercase;
+  line-height: 0.95;
+  background: linear-gradient(135deg, #ffcb40 0%, #00ecec 80%, #006eb8 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  animation: gradient-move 3s ease-in-out infinite;
+}
+
+.glimps-featured-images {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 200vw;
+  height: 200vh;
+  transform-style: preserve-3d;
+  perspective: 500px;
+  pointer-events: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.glimps-img-card {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 650px;
+  height: 650px;
+  border-radius: 2em;
+  overflow: hidden;
+  background: rgba(44, 62, 80, 0.85);
+  border: 2px solid #00ecec55;
+  box-shadow: 0 4px 32px 0 #004cf144;
+  transform: translate(-50%, -50%);
+}
+
+.glimps-img-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.glimps-featured-work-indicator {
+  position: absolute;
+  top: 50%;
+  right: 2em;
+  transform: translate(0%, -50%);
+  width: 2rem;
+  height: max-content;
+  padding: 1.25rem 0.65rem;
+  background-color: var(--fg); /* dark background */
+  color: var(--bg); /* white text */
+  border-radius: 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 0.35rem;
+  z-index: 10;
+}
+
+.glimps-featured-work-indicator .glimps-mn {
+  color: var(--bg);
+  font-family: "supply-mono", monospace;
+  font-size: 1rem;
+  font-weight: bold;
+  letter-spacing: 0.1em;
+  margin: 0.2em 0 0.2em 0;
+  text-align: center;
+}
+
+.glimps-featured-work-indicator .glimps-indicator {
+  width: 100%;
+  height: 1.5px;
+  background-color: var(--bg);
+  opacity: 0.2;
+  transition: opacity 0.3s;
+  margin: 0.1em 0;
+}
+
+.glimps-indicator-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 0.5em;
+}
+
+.glimps-featured-work-footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  padding: 2em;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 2;
+  color: var(--fg);
+  font-family: "formula-narrow", sans-serif;
+}
+
+.glimps-featured-work-footer a {
+  color: var(--fg);
+  text-decoration: underline;
+}
+
+.glimps-mn {
+  font-family: "supply-mono", monospace;
+  font-size: 0.875rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  font-weight: 500;
+  line-height: 1.125;
+}
+
+@media (max-width: 1000px) {
+  .glimps-featured-work {
+    height: max-content;
+    min-height: 60vh;
+    padding-bottom: 2em;
+  }
+  .glimps-featured-titles {
+    width: 100vw;
+    height: auto;
+    flex-direction: column;
+    align-items: center;
+    gap: 2em;
+  }
+  .glimps-featured-title-wrapper {
+    width: 100vw;
+    min-height: 120px;
+    margin-bottom: 2.5em;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .glimps-featured-title-img {
+    display: block;
+    width: 90vw;
+    max-width: 600px;
+    aspect-ratio: 3/1;
+    height: auto;
+    margin: 0 auto 1em auto;
+    border-radius: 2em;
+    overflow: hidden;
+    background: var(--bg2);
+  }
+  .glimps-featured-title-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    border-radius: 2em;
+  }
+  .glimps-featured-title {
+    font-size: 1.3rem;
+    text-align: center;
+    margin: 0 1em;
+    word-break: break-word;
+    line-height: 1.2;
+    margin-top: 0.5em;
+  }
+  .glimps-featured-images {
+    display: none;
+  }
+  .glimps-featured-work-indicator {
+    display: none;
+  }
+  .glimps-featured-work-footer {
+    flex-direction: column;
+    gap: 0.5em;
+    padding: 1em;
+    position: relative;
+    margin-top: 4em;
+    justify-content: center;
+  }
+  .glimps-featured-work-footer p:nth-child(1),
+  .glimps-featured-work-footer p:nth-child(2) {
+    display: none;
+  }
+  .glimps-img-card {
+    width: 300px;
+    height: 300px;
+  }
+}

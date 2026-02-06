@@ -1,0 +1,785 @@
+.preloader {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  /* background: #030710; Removed default bg to allow curtains */
+  z-index: 9999;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.curtain-panel {
+  position: absolute;
+  top: 0;
+  height: 100%;
+  width: 51%; /* Slight overlap to prevent gap */
+  background: #030710;
+  z-index: 1;
+}
+
+.curtain-left {
+  left: 0;
+  border-right: 1px solid rgba(255, 203, 64, 0.1);
+}
+
+.curtain-right {
+  right: 0;
+  border-left: 1px solid rgba(255, 203, 64, 0.1);
+}
+
+/* Background sits on top of curtains initially */
+.preloader-bg {
+  z-index: 2;
+  transition: opacity 0.5s ease;
+}
+
+.preloader.fade-out {
+  opacity: 0;
+  visibility: hidden;
+}
+
+/* Animated Background */
+.preloader-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+.floating-shapes {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+
+.shape {
+  position: absolute;
+  border-radius: 50%;
+  background: linear-gradient(
+    45deg,
+    rgba(15, 43, 105, 0.1),
+    rgba(255, 203, 64, 0.1)
+  );
+  animation: float 6s ease-in-out infinite;
+}
+
+.shape-1 {
+  width: 80px;
+  height: 80px;
+  top: 20%;
+  left: 10%;
+  animation-delay: 0s;
+}
+
+.shape-2 {
+  width: 120px;
+  height: 120px;
+  top: 60%;
+  right: 15%;
+  animation-delay: 1s;
+}
+
+.shape-3 {
+  width: 60px;
+  height: 60px;
+  bottom: 30%;
+  left: 20%;
+  animation-delay: 2s;
+}
+
+.shape-4 {
+  width: 100px;
+  height: 100px;
+  top: 10%;
+  right: 30%;
+  animation-delay: 3s;
+}
+
+.shape-5 {
+  width: 70px;
+  height: 70px;
+  bottom: 20%;
+  right: 10%;
+  animation-delay: 4s;
+}
+
+@keyframes float {
+  0%,
+  100% {
+    transform: translateY(0px) rotate(0deg);
+    opacity: 0.3;
+  }
+  50% {
+    transform: translateY(-30px) rotate(180deg);
+    opacity: 0.7;
+  }
+}
+
+.grid-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: linear-gradient(rgba(15, 43, 105, 0.1) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(15, 43, 105, 0.1) 1px, transparent 1px);
+  background-size: 50px 50px;
+  animation: grid-move 20s linear infinite;
+}
+
+@keyframes grid-move {
+  0% {
+    transform: translate(0, 0);
+  }
+  100% {
+    transform: translate(50px, 50px);
+  }
+}
+
+.preloader-content {
+  position: relative;
+  z-index: 10;
+  text-align: center;
+  color: white;
+  max-width: 600px;
+  padding: 2rem;
+}
+
+/* Logo Animation */
+.logo-animation {
+  margin-bottom: 3rem;
+}
+
+.ieee-logo {
+  position: relative;
+  width: 150px;
+  height: 150px;
+  margin: 0 auto;
+}
+
+.logo-circle {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100px;
+  height: 100px;
+  background: linear-gradient(135deg, #0f2b69, #ffcb40, #b4860b);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 0 30px rgba(15, 43, 105, 0.5), 0 0 60px rgba(255, 203, 64, 0.3),
+    0 0 90px rgba(180, 134, 11, 0.2);
+  animation: logo-pulse 2s ease-in-out infinite;
+}
+
+.logo-inner {
+  width: 80px;
+  height: 80px;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  backdrop-filter: blur(10px);
+}
+
+.ieee-text {
+  font-size: 1.2rem;
+  font-weight: 800;
+  color: white;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+  letter-spacing: 2px;
+}
+
+@keyframes logo-pulse {
+  0%,
+  100% {
+    transform: translate(-50%, -50%) scale(1);
+  }
+  50% {
+    transform: translate(-50%, -50%) scale(1.05);
+  }
+}
+
+.logo-rings {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.ring {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: 2px solid transparent;
+  border-radius: 50%;
+  animation: ring-rotate 3s linear infinite;
+}
+
+.ring-1 {
+  border-top-color: #0f2b69;
+  animation-delay: 0s;
+}
+
+.ring-2 {
+  border-right-color: #ffcb40;
+  animation-delay: 1s;
+  transform: scale(1.2);
+}
+
+.ring-3 {
+  border-bottom-color: #b4860b;
+  animation-delay: 2s;
+  transform: scale(1.4);
+}
+
+@keyframes ring-rotate {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+/* Title Styling */
+.title-container {
+  margin-bottom: 2rem;
+}
+
+.main-title {
+  font-size: 3.5rem;
+  font-weight: 900;
+  margin: 0;
+  line-height: 1.2;
+  background: linear-gradient(135deg, #0f2b69, #ffcb40, #b4860b);
+  background-size: 200% 200%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  animation: title-gradient 4s ease-in-out infinite;
+}
+
+.title-line {
+  display: block;
+  animation: title-slide 1.5s ease-out forwards;
+  opacity: 0;
+  transform: translateY(30px);
+}
+
+.title-line:nth-child(1) {
+  animation-delay: 0.5s;
+}
+
+.title-line:nth-child(2) {
+  animation-delay: 0.8s;
+}
+
+@keyframes title-gradient {
+  0%,
+  100% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+}
+
+@keyframes title-slide {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.subtitle {
+  font-size: 1.3rem;
+  margin: 1rem 0 0 0;
+  opacity: 0;
+  animation: subtitle-fade 1s ease-out 1.2s forwards;
+  color: rgba(255, 255, 255, 0.8);
+  font-weight: 300;
+  letter-spacing: 2px;
+}
+
+@keyframes subtitle-fade {
+  to {
+    opacity: 1;
+  }
+}
+
+/* Loading Text */
+.loading-text-container {
+  margin-bottom: 2rem;
+  min-height: 30px;
+}
+
+.loading-text {
+  font-size: 1.1rem;
+  color: rgba(255, 255, 255, 0.9);
+  font-weight: 400;
+  animation: text-glow 2s ease-in-out infinite;
+}
+
+.cursor {
+  animation: blink 1s infinite;
+  color: #ffcb40;
+  font-weight: bold;
+}
+
+@keyframes text-glow {
+  0%,
+  100% {
+    text-shadow: 0 0 5px rgba(255, 255, 255, 0.3);
+  }
+  50% {
+    text-shadow: 0 0 15px rgba(255, 203, 64, 0.6);
+  }
+}
+
+@keyframes blink {
+  0%,
+  50% {
+    opacity: 1;
+  }
+  51%,
+  100% {
+    opacity: 0;
+  }
+}
+
+/* Progress Bar */
+.progress-container {
+  margin-bottom: 2rem;
+}
+
+.progress-bar {
+  position: relative;
+  width: 100%;
+  height: 8px;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 4px;
+  overflow: hidden;
+  margin-bottom: 1rem;
+  backdrop-filter: blur(10px);
+}
+
+.progress-track {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.progress-fill {
+  height: 100%;
+  background: linear-gradient(90deg, #0f2b69, #ffcb40, #b4860b);
+  border-radius: 4px;
+  transition: width 0.3s ease;
+  position: relative;
+  box-shadow: 0 0 20px rgba(15, 43, 105, 0.5);
+}
+
+.progress-fill::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(255, 255, 255, 0.3),
+    transparent
+  );
+  animation: progress-shimmer 2s ease-in-out infinite;
+}
+
+@keyframes progress-shimmer {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(100%);
+  }
+}
+
+.progress-glow {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, #0f2b69, #ffcb40, #b4860b);
+  border-radius: 4px;
+  opacity: 0.3;
+  filter: blur(8px);
+  animation: glow-pulse 2s ease-in-out infinite;
+}
+
+@keyframes glow-pulse {
+  0%,
+  100% {
+    opacity: 0.3;
+  }
+  50% {
+    opacity: 0.6;
+  }
+}
+
+.progress-percentage {
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: #ffcb40;
+  text-shadow: 0 0 10px rgba(255, 203, 64, 0.5);
+}
+
+/* Particle Effects */
+.particles {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+}
+
+.particle {
+  position: absolute;
+  width: 4px;
+  height: 4px;
+  background: #ffcb40;
+  border-radius: 50%;
+  animation: particle-float 3s ease-in-out infinite;
+  animation-delay: var(--delay);
+}
+
+.particle:nth-child(odd) {
+  background: #0f2b69;
+}
+
+.particle:nth-child(3n) {
+  background: #b4860b;
+}
+
+@keyframes particle-float {
+  0%,
+  100% {
+    transform: translateY(100vh) translateX(0);
+    opacity: 0;
+  }
+  10% {
+    opacity: 1;
+  }
+  90% {
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(-100px) translateX(100px);
+    opacity: 0;
+  }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .preloader {
+    padding: 10px;
+  }
+
+  .preloader-content {
+    padding: 30px 20px;
+    max-width: 350px;
+  }
+
+  .logo-animation {
+    margin-bottom: 2rem;
+  }
+
+  .ieee-logo {
+    width: 120px;
+    height: 120px;
+  }
+
+  .logo-circle {
+    width: 80px;
+    height: 80px;
+  }
+
+  .logo-inner {
+    width: 60px;
+    height: 60px;
+  }
+
+  .ieee-text {
+    font-size: 1rem;
+  }
+
+  .title-container {
+    margin-bottom: 1.5rem;
+  }
+
+  .main-title {
+    font-size: 2.5rem;
+  }
+
+  .subtitle {
+    font-size: 1.1rem;
+    margin-top: 0.8rem;
+  }
+
+  .loading-text-container {
+    margin-bottom: 1.5rem;
+    min-height: 25px;
+  }
+
+  .loading-text {
+    font-size: 1rem;
+  }
+
+  .progress-container {
+    margin-bottom: 1.5rem;
+  }
+
+  .progress-bar {
+    height: 6px;
+  }
+
+  .progress-percentage {
+    font-size: 1rem;
+  }
+
+  /* Adjust floating shapes for mobile */
+  .shape-1,
+  .shape-2,
+  .shape-3,
+  .shape-4,
+  .shape-5,
+  .shape-6 {
+    transform: scale(0.7);
+  }
+
+  /* Adjust light rays for mobile */
+  .ray-1,
+  .ray-2,
+  .ray-3 {
+    width: 1px;
+  }
+
+  /* Adjust waves for mobile */
+  .wave-1,
+  .wave-2,
+  .wave-3 {
+    height: 60px;
+  }
+
+  /* Adjust orbs for mobile */
+  .orb-1 {
+    width: 120px;
+    height: 120px;
+  }
+
+  .orb-2 {
+    width: 100px;
+    height: 100px;
+  }
+
+  .orb-3 {
+    width: 110px;
+    height: 110px;
+  }
+}
+
+@media (max-width: 480px) {
+  .preloader-content {
+    padding: 25px 15px;
+    max-width: 300px;
+  }
+
+  .ieee-logo {
+    width: 100px;
+    height: 100px;
+  }
+
+  .logo-circle {
+    width: 60px;
+    height: 60px;
+  }
+
+  .logo-inner {
+    width: 45px;
+    height: 45px;
+  }
+
+  .ieee-text {
+    font-size: 0.8rem;
+  }
+
+  .main-title {
+    font-size: 2rem;
+  }
+
+  .subtitle {
+    font-size: 1rem;
+    margin-top: 0.6rem;
+  }
+
+  .loading-text {
+    font-size: 0.9rem;
+  }
+
+  .progress-bar {
+    height: 5px;
+  }
+
+  .progress-percentage {
+    font-size: 0.9rem;
+  }
+
+  /* Further reduce background elements for small screens */
+  .shape-1,
+  .shape-2,
+  .shape-3,
+  .shape-4,
+  .shape-5,
+  .shape-6 {
+    transform: scale(0.5);
+  }
+
+  .wave-1,
+  .wave-2,
+  .wave-3 {
+    height: 40px;
+  }
+
+  .orb-1 {
+    width: 80px;
+    height: 80px;
+  }
+
+  .orb-2 {
+    width: 70px;
+    height: 70px;
+  }
+
+  .orb-3 {
+    width: 75px;
+    height: 75px;
+  }
+}
+
+@media (max-width: 360px) {
+  .preloader-content {
+    padding: 20px 10px;
+    max-width: 280px;
+  }
+
+  .ieee-logo {
+    width: 80px;
+    height: 80px;
+  }
+
+  .logo-circle {
+    width: 50px;
+    height: 50px;
+  }
+
+  .logo-inner {
+    width: 35px;
+    height: 35px;
+  }
+
+  .ieee-text {
+    font-size: 0.7rem;
+  }
+
+  .main-title {
+    font-size: 1.75rem;
+  }
+
+  .subtitle {
+    font-size: 0.9rem;
+  }
+
+  .loading-text {
+    font-size: 0.8rem;
+  }
+
+  .progress-bar {
+    height: 4px;
+  }
+
+  .progress-percentage {
+    font-size: 0.8rem;
+  }
+}
+
+/* Landscape orientation adjustments */
+@media (max-height: 500px) and (orientation: landscape) {
+  .preloader-content {
+    padding: 20px;
+    max-width: 400px;
+  }
+
+  .logo-animation {
+    margin-bottom: 1rem;
+  }
+
+  .ieee-logo {
+    width: 80px;
+    height: 80px;
+  }
+
+  .logo-circle {
+    width: 50px;
+    height: 50px;
+  }
+
+  .logo-inner {
+    width: 35px;
+    height: 35px;
+  }
+
+  .ieee-text {
+    font-size: 0.7rem;
+  }
+
+  .title-container {
+    margin-bottom: 1rem;
+  }
+
+  .main-title {
+    font-size: 2rem;
+  }
+
+  .subtitle {
+    font-size: 0.9rem;
+    margin-top: 0.5rem;
+  }
+
+  .loading-text-container {
+    margin-bottom: 1rem;
+    min-height: 20px;
+  }
+
+  .loading-text {
+    font-size: 0.9rem;
+  }
+
+  .progress-container {
+    margin-bottom: 1rem;
+  }
+}
