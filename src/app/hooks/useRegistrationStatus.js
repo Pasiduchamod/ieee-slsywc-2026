@@ -15,7 +15,7 @@ export const useRegistrationStatus = () => {
     // Registration opens: July 18, 2026 at 9:00 PM
     const registrationOpenDate = new Date("2026-07-18T21:00:00");
     // Registration closes: August 13, 2026 at 11:59 PM
-    const registrationCloseDate = new Date("2026-09-20T23:59:59");
+    const registrationCloseDate = new Date("2026-08-13T23:59:59");
 
     const calculateTimeLeft = () => {
       const now = new Date();

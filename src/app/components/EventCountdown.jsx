@@ -134,11 +134,11 @@ const EventCountdown = () => {
                   </svg>
                 </div>
                 <div className="live-message">
-                  <h3 className="text-2xl font-bold text-green-300 mb-2">
+                  <h3 className="text-2xl font-bold mb-2 gold-text">
                     Event is Live!
                   </h3>
-                  <p className="text-green-400">September 26, 2026</p>
-                  <p className="text-gray-400 mt-2">Colombo</p>
+                  <p className="text-[#b8eaff]">September 26, 2026</p>
+                  <p className="text-[#b8eaff]/70 mt-2">Colombo</p>
                 </div>
               </div>
             </div>
@@ -350,16 +350,16 @@ const EventCountdown = () => {
           position: relative;
           background: linear-gradient(
             135deg,
-            rgba(34, 197, 94, 0.2) 0%,
-            rgba(16, 185, 129, 0.2) 100%
+            rgba(180, 134, 11, 0.15) 0%,
+            rgba(15, 23, 42, 0.6) 100%
           );
           backdrop-filter: blur(20px);
-          border: 1px solid rgba(34, 197, 94, 0.3);
+          border: 1px solid rgba(255, 203, 64, 0.3);
           border-radius: 24px;
           padding: 3rem 2rem;
           text-align: center;
           min-width: 300px;
-          box-shadow: 0 8px 32px rgba(34, 197, 94, 0.2);
+          box-shadow: 0 8px 32px rgba(255, 203, 64, 0.15);
           transition: all 0.3s ease;
         }
 
@@ -367,19 +367,25 @@ const EventCountdown = () => {
           display: flex;
           justify-content: center;
           margin-bottom: 1.5rem;
-          color: #22c55e;
+          color: #ffcb40;
+          filter: drop-shadow(0 0 10px rgba(255, 203, 64, 0.4));
         }
 
         .live-message h3 {
           font-size: 1.75rem;
           font-weight: 700;
-          color: #d1fae5;
+          color: #ffcb40;
           margin-bottom: 0.5rem;
+          text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+          background: linear-gradient(to right, #ffcb40, #fbf5b7, #ffcb40);
+          -webkit-background-clip: text;
+          background-clip: text;
+          color: transparent;
         }
 
         .live-message p {
           font-size: 1rem;
-          color: #9ca3af;
+          color: #b8eaff;
           font-weight: 500;
         }
 
@@ -391,23 +397,23 @@ const EventCountdown = () => {
           padding: 1.25rem 3rem;
           font-size: 1.25rem;
           font-weight: 700;
-          color: white;
-          background: linear-gradient(135deg, #004cf1 0%, #00ecec 100%);
-          border: 2px solid rgba(0, 236, 236, 0.3);
+          color: #0f172a;
+          background: linear-gradient(135deg, #b4860b 0%, #ffcb40 50%, #fbf5b7 100%);
+          border: 1px solid rgba(255, 203, 64, 0.5);
           border-radius: 50px;
           text-decoration: none;
           overflow: hidden;
           transition: all 0.3s ease;
           box-shadow:
-            0 10px 30px rgba(0, 76, 241, 0.3),
+            0 10px 30px rgba(255, 203, 64, 0.3),
             inset 0 1px 0 rgba(255, 255, 255, 0.2);
         }
 
         .register-button:hover {
           transform: translateY(-2px) scale(1.05);
-          border-color: rgba(0, 236, 236, 0.8);
+          border-color: #ffcb40;
           box-shadow:
-            0 20px 40px rgba(0, 76, 241, 0.4),
+            0 20px 40px rgba(255, 203, 64, 0.4),
             inset 0 1px 0 rgba(255, 255, 255, 0.3);
         }
 
@@ -425,7 +431,7 @@ const EventCountdown = () => {
           background: linear-gradient(
             90deg,
             transparent,
-            rgba(255, 255, 255, 0.2),
+            rgba(255, 255, 255, 0.4),
             transparent
           );
           transition: left 0.5s ease;
@@ -443,18 +449,14 @@ const EventCountdown = () => {
           padding: 1.25rem 3rem;
           font-size: 1.25rem;
           font-weight: 700;
-          color: #22c55e;
-          background: linear-gradient(
-            135deg,
-            rgba(34, 197, 94, 0.2) 0%,
-            rgba(16, 185, 129, 0.2) 100%
-          );
-          border: 2px solid rgba(34, 197, 94, 0.3);
+          color: #0f172a;
+          background: linear-gradient(135deg, #b4860b 0%, #ffcb40 50%, #fbf5b7 100%);
+          border: 1px solid rgba(255, 203, 64, 0.4);
           border-radius: 50px;
           text-decoration: none;
           overflow: hidden;
           transition: all 0.3s ease;
-          box-shadow: 0 10px 30px rgba(34, 197, 94, 0.2);
+          box-shadow: 0 10px 30px rgba(255, 203, 64, 0.2);
           cursor: default;
         }
 
