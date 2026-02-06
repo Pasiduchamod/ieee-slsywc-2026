@@ -12,13 +12,13 @@ const workItems = [
   },
   {
     title: "jie jie beach hotel panadura",
-    img: "/2024/event/2024-2.jpg",
+    img: "/2024/event/2025-1.jpeg",
   },
   {
     title: "200+ Participants | 15 Expert Speakers",
-    img: "/2024/event/2024-3.jpg",
+    img: "/2024/event/2025-2.jpeg",
   },
-  { title: "3 Days of Inspiration", img: "/2024/event/2024-4.jpg" },
+  { title: "3 Days of Inspiration", img: "/2024/event/2025-3.jpeg" },
 ];
 
 const allImages = [

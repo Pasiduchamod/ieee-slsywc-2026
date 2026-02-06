@@ -158,13 +158,11 @@ const Theme = () => {
             <div className="mission-intro-copy">
               {/* Mobile About Heading */}
               <div className="about-mobile-heading">
-                <Copy>
-                  <h2 className="text-4xl md:text-6xl text-center font-bold text-white">
+                  <h2 className="text-4xl md:text-6xl text-center font-bold gold-text">
                     Welcome to the Flagship Event of IEEE Sri Lanka Section
                   </h2>
 
-                  <div className="w-24 h-1 bg-gradient-to-r from-[#004CF1] to-[#00ECEC] rounded-full mx-auto mt-6"></div>
-                </Copy>
+                  <div className="w-24 h-1 bg-gradient-to-r from-[#bf953f] via-[#fcf6ba] to-[#b38728] rounded-full mx-auto mt-6"></div>
               </div>
               <Copy>
                 <h3 className="mission-intro-desc">
