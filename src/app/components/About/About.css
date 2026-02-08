@@ -109,7 +109,7 @@
   line-height: 1.4;
 }
 
-.about-copy .about-copy-content h3 span {
+/* .about-copy .about-copy-content h3 span {
   background: linear-gradient(135deg, #004cf1 0%, #00ecec 50%, #00b836 100%);
   background-size: 200% 200%;
   -webkit-background-clip: text;
@@ -128,7 +128,7 @@
   50% {
     background-position: 100% 50%;
   }
-}
+} */
 
 .about-copy .about-tag {
   position: absolute;

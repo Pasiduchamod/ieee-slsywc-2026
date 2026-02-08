@@ -161,7 +161,7 @@ const About = () => {
                 researchers, academics, industry professionals, and students
                 from diverse backgrounds to share their thoughts, insights, and
                 experiences, the SLSYW Congress 2026 will unravel under the
-                theme <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#00ECEC] via-[#004CF1] to-[#b4860b] font-bold">‘Intelligence for Impact‘.</span>
+                theme <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#b4860b] via-[#ffcb40] to-[#fbf5b7] font-bold">‘Intelligence for Impact‘.</span>
               </h3>
             </Copy>
           </div>
