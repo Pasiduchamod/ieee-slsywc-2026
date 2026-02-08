@@ -20,6 +20,7 @@ const menuLinks = [
   { label: "Theme", href: "#theme" },
   { label: "Schedule", href: "#schedule" },
   { label: "Organizers", href: "#organizers" },
+  { label: "Past Congress", href: "/past-congress" },
   { label: "Register", href: "#register" },
 ];
 
@@ -302,7 +303,7 @@ const Navbar = () => {
 
           {/* Menu Items */}
           <div
-            className="flex-1 flex flex-col items-center justify-center gap-8"
+            className="flex-1 flex flex-col items-center justify-start gap-2 pt-32 md:pt-30"
             ref={navItemsRef}
           >
             {menuLinks.map((link, idx) => (
@@ -317,7 +318,7 @@ const Navbar = () => {
                   {link.href.startsWith("#") ? (
                     <a
                       href={link.href}
-                      className="block p-2 no-underline text-[#e3e3db] hover:text-[#ffcb40] transition-colors duration-300 cursor-pointer"
+                      className="block p-2 no-underline text-[#e3e3db] hover:text-transparent hover:bg-clip-text hover:bg-gradient-to-r from-[#b4860b] via-[#ffcb40] to-[#fbf5b7] transition-all duration-300 cursor-pointer"
                       onClick={(e) => handleMenuLinkClick(e, link.href)}
                     >
                       {link.label}
@@ -325,7 +326,7 @@ const Navbar = () => {
                   ) : (
                     <Link
                       href={link.href}
-                      className="block p-2 no-underline text-[#e3e3db] hover:text-[#ffcb40] transition-colors duration-300"
+                      className="block p-2 no-underline text-[#e3e3db] hover:text-transparent hover:bg-clip-text hover:bg-gradient-to-r from-[#b4860b] via-[#ffcb40] to-[#fbf5b7] transition-all duration-300"
                       onClick={(e) => handleMenuLinkClick(e, link.href)}
                     >
                       {link.label}
@@ -333,7 +334,7 @@ const Navbar = () => {
                   )}
                 </p>
                 {/* Animated underline */}
-                <span className="block h-1 w-0 bg-gradient-to-r from-[#b4860b] via-[#ffcb40] to-[#0f2b69] transition-all duration-300 group-hover:w-full"></span>
+                <span className="block h-1 w-0 bg-gradient-to-r from-[#b4860b] via-[#ffcb40] to-[#fbf5b7] transition-all duration-300 group-hover:w-full rounded-full"></span>
               </div>
             ))}
           </div>
