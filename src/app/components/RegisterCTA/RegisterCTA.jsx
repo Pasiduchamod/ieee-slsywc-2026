@@ -120,6 +120,7 @@ const RegisterCTA = () => {
                 Flagship Event of IEEE Sri Lanka Section
               </span>
             </h2>
+            <div className="w-24 h-1 bg-gradient-to-r from-[#bf953f] via-[#fcf6ba] to-[#b38728] rounded-full mx-auto mb-8"></div>
 
             {/* Subtitle */}
             <p className="text-xl text-slate-300 mb-12 max-w-2xl mx-auto leading-relaxed">
@@ -228,11 +229,11 @@ const RegisterCTA = () => {
 
             <a
               href="/past-congress"
-              className="group flex items-center gap-2 text-white/70 hover:text-[#ffcb40] transition-colors duration-300 font-medium text-sm uppercase tracking-widest border-b border-transparent hover:border-[#ffcb40] pb-1"
+              className="group flex items-center gap-3 px-8 py-4 rounded-full border border-[#ffcb40]/40 bg-white/5 backdrop-blur-sm hover:bg-white/10 hover:border-[#ffcb40] transition-all duration-300 transform hover:-translate-y-1 hover:shadow-[0_0_20px_rgba(255,203,64,0.3)] shadow-[0_0_10px_rgba(255,203,64,0.1)]"
             >
-              <span>See Past Congresses</span>
+              <span className="text-[#ffcb40] font-medium tracking-wider uppercase text-sm group-hover:text-[#ffdb70] transition-colors border-b border-[#ffcb40]/30 pb-0.5">See Past Congresses</span>
               <svg
-                className="w-4 h-4 transition-transform duration-300 group-hover:translate-x-1"
+                className="w-5 h-5 text-white/70 group-hover:text-[#ffcb40] transition-all duration-300 group-hover:translate-x-1"
                 fill="none"
                 stroke="currentColor"
                 viewBox="0 0 24 24"
