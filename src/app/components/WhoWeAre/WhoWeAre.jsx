@@ -138,7 +138,7 @@ const WhoWeAre = () => {
   }, []);
 
   return (
-    <section className="whoweare z-20">
+    <section id="about" className="whoweare z-20">
       <div className="whoweare-container">
         <div className="whoweare-scroll">
           <div className="whoweare-header">
@@ -148,19 +148,19 @@ const WhoWeAre = () => {
           </div>
 
           <div className="whoweare-img" id="whoweare-img-1">
-            <img src="/2024/event/2024-1.jpg" alt="" />
+            <img src="/2024/event/2025-1.jpeg" alt="" />
           </div>
           <div className="whoweare-img" id="whoweare-img-2">
-            <img src="/2024/event/2024-2.jpg" alt="" />
+            <img src="/2024/event/2025-2.jpeg" alt="" />
           </div>
           <div className="whoweare-img" id="whoweare-img-3">
-            <img src="/2024/event/2024-3.jpg" alt="" />
+            <img src="/2024/event/2025-3.jpeg" alt="" />
           </div>
           <div className="whoweare-img" id="whoweare-img-4">
-            <img src="/2024/event/2024-4.jpg" alt="" />
+            <img src="/2024/event/2025-4.jpeg" alt="" />
           </div>
           <div className="whoweare-img" id="whoweare-img-5">
-            <img src="/2024/event/2024-5.jpg" alt="" />
+            <img src="/2024/event/2025-5.jpeg" alt="" />
           </div>
         </div>
       </div>

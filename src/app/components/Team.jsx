@@ -109,6 +109,7 @@ const teamData = {
 function Team() {
   return (
     <div
+      id="organizers"
       className="relative min-h-screen py-20 overflow-hidden"
     >
       {/* Enhanced Animated Background */}

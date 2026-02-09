@@ -14,7 +14,7 @@ const EventCountdown = () => {
 
   useEffect(() => {
     // Event starts: September 26, 2026 at 9:00 AM
-    const eventDate = new Date("2026-09-26T09:00:00");
+    const eventDate = new Date("2026-09-18T09:00:00");
 
     const timer = setInterval(() => {
       const now = new Date().getTime();
@@ -137,7 +137,7 @@ const EventCountdown = () => {
                   <h3 className="text-2xl font-bold mb-2 gold-text">
                     Event is Live!
                   </h3>
-                  <p className="text-[#b8eaff]">September 26, 2026</p>
+                  <p className="text-[#b8eaff]">September 18, 2026</p>
                   <p className="text-[#b8eaff]/70 mt-2">Colombo</p>
                 </div>
               </div>
@@ -204,7 +204,7 @@ const EventCountdown = () => {
             <h3 className="text-sm font-semibold text-white/60 uppercase tracking-widest mb-2">
               Event Dates
             </h3>
-            <p className="text-xl text-white font-bold group-hover:text-[#ffcb40] transition-colors">September 2026</p>
+            <p className="text-xl text-white font-bold group-hover:text-[#ffcb40] transition-colors">18,19,20 September 2026</p>
           </div>
 
           <div className="event-info-card group">

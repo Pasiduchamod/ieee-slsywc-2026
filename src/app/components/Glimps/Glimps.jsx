@@ -7,7 +7,7 @@ import NeuralNetwork from "../NeuralNetwork";
 
 const workItems = [
   {
-    title: "Revolutionizing the Digital Landscape",
+    title: "Innovation for sustainability",
     img: "/2024/theme.png",
   },
   {
@@ -22,7 +22,7 @@ const workItems = [
 ];
 
 const allImages = [
-  "/2024/theme.png",
+  "/2024/event/2025-9.jpeg",
   "/2024/event/2025-2.jpeg",
   "/2024/event/2025-3.jpeg",
   "/2024/event/2025-4.jpeg",

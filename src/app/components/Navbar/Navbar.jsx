@@ -1,7 +1,7 @@
 "use client";
 import { useEffect, useRef, useState } from "react";
 import Link from "next/link";
-import { usePathname } from "next/navigation";
+import { usePathname, useRouter } from "next/navigation";
 import gsap from "gsap";
 import { useRegistrationStatus } from "../../hooks/useRegistrationStatus";
 import {
@@ -18,16 +18,17 @@ const menuLinks = [
   { label: "Home", href: "/" },
   { label: "About", href: "#about" },
   { label: "Theme", href: "#theme" },
-  { label: "Schedule", href: "#schedule" },
+  // { label: "Schedule", href: "#schedule" },
   { label: "Organizers", href: "#organizers" },
   { label: "Past Congress", href: "/past-congress" },
-  { label: "Register", href: "#register" },
+  // { label: "Register", href: "#register" },
 ];
 
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [scrollY, setScrollY] = useState(0);
   const pathname = usePathname();
+  const router = useRouter();
   const { isRegistrationOpen, isRegistrationEnded, timeLeft } =
     useRegistrationStatus();
 
@@ -101,17 +102,25 @@ const Navbar = () => {
     if (href.startsWith("#")) {
       e.preventDefault();
       setIsMenuOpen(false); // close overlay first
-      setTimeout(() => {
-        const id = href.slice(1);
-        const el = document.getElementById(id);
-        console.log("Trying to scroll to:", id, el);
-        if (el) {
-          el.scrollIntoView({ behavior: "smooth" });
-        } else {
-          console.warn("Section not found:", id);
-        }
-      }, 350); // wait for overlay to close
-    } else if (href === "/") {
+      
+      if (pathname !== "/") {
+        // If not on home page, navigate to home with the hash
+        router.push("/" + href);
+      } else {
+        // If on home page, scroll to section
+        setTimeout(() => {
+          const id = href.slice(1);
+          const el = document.getElementById(id);
+          console.log("Trying to scroll to:", id, el);
+          if (el) {
+            el.scrollIntoView({ behavior: "smooth" });
+          } else {
+            console.warn("Section not found:", id);
+          }
+        }, 350); // wait for overlay to close
+      }
+    } else {
+      // For standard navigation (e.g. /, /past-congress), just close the menu
       setIsMenuOpen(false);
     }
   };
