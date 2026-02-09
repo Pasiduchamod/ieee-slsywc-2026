@@ -156,7 +156,7 @@ const About = () => {
             <Copy>
               <h3>
                 Witness the inspiring experience of an attempt to empower
-                innovations for a better tomorrow with the 14th installment of
+                innovations for a better tomorrow with the 15th installment of
                 the largest technical congress in the country. Uniting
                 researchers, academics, industry professionals, and students
                 from diverse backgrounds to share their thoughts, insights, and

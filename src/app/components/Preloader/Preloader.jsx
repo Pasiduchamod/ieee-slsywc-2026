@@ -108,10 +108,20 @@ const Preloader = () => {
       const images = document.querySelectorAll("img");
       const totalImages = images.length;
       let loadedImages = 0;
+      
+      const minDisplayTime = 2500; // Minimum time to show preloader (2.5s)
+      const startTime = Date.now();
 
-      // If no images, hide preloader after a short delay
+      const finishLoading = () => {
+        const elapsedTime = Date.now() - startTime;
+        const remainingTime = Math.max(0, minDisplayTime - elapsedTime);
+        
+        setTimeout(hidePreloader, remainingTime);
+      };
+
+      // If no images, hide preloader after min time
       if (totalImages === 0) {
-        setTimeout(hidePreloader, 1000);
+        finishLoading();
         return;
       }
 
@@ -124,8 +134,7 @@ const Preloader = () => {
         loadedImages++;
         if (loadedImages >= totalImages) {
           clearTimeout(timeout);
-          // Add a small delay at 100% to let user see "completed" state
-          setTimeout(hidePreloader, 800); 
+          finishLoading();
         }
       };
 
@@ -141,7 +150,7 @@ const Preloader = () => {
       // Check if all images are already loaded
       if (loadedImages >= totalImages) {
         clearTimeout(timeout);
-        setTimeout(hidePreloader, 800);
+        finishLoading();
       }
     };
 

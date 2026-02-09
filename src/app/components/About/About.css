@@ -133,24 +133,37 @@
 .about-copy .about-tag {
   position: absolute;
   width: max-content;
-  background: linear-gradient(
-    135deg,
-    rgba(0, 76, 241, 0.9), /* Blue */
-    rgba(180, 134, 11, 0.9) /* Gold */
-  );
-  box-shadow: 0 4px 15px rgba(0, 76, 241, 0.4);
-  border: 1px solid rgba(255, 255, 255, 0.2);
-  border-radius: 0.5em;
-  backdrop-filter: blur(5px);
+  background: 
+    linear-gradient(#0a101a, #0a101a) padding-box,
+    linear-gradient(135deg, #b4860b, #ffcb40, #fbf5b7, #b4860b) border-box;
+  border: 1px solid transparent;
+  border-radius: 50px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5), 0 0 15px rgba(255, 203, 64, 0.2);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  transition: all 0.3s ease;
+}
+
+.about-copy .about-tag:hover {
+  transform: scale(1.05);
+  box-shadow: 0 4px 25px rgba(0, 0, 0, 0.6), 0 0 25px rgba(255, 203, 64, 0.4);
+  background: 
+    linear-gradient(#0a101a, #0a101a) padding-box,
+    linear-gradient(135deg, #fbf5b7, #ffcb40, #b4860b, #fbf5b7) border-box;
 }
 
 .about-copy .about-tag p {
   text-transform: uppercase;
-  color: #fff;
-  text-shadow: 0 0 6px var(--about-accent1);
-  font-size: 1rem;
-  padding: 0.75em 0.5em 0.5em 0.5em;
+  background: linear-gradient(to right, #b4860b, #ffcb40, #fbf5b7);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  font-size: 0.9rem;
+  padding: 0.6em 1.5em;
   margin: 0;
+  text-shadow: 0 0 20px rgba(255, 203, 64, 0.3); /* Subtle glow around text */
 }
 
 .about-copy #about-tag-1 {
