@@ -26,34 +26,42 @@ const Preloader = () => {
   ];
 
   // Scramble text effect helper
-  const scrambleText = (finalText) => {
-    const chars = "ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789@#$%&";
-    let iterations = 0;
-    
-    const interval = setInterval(() => {
-      setDisplayText(
-        finalText
-          .split("")
-          .map((letter, index) => {
-            if (index < iterations) {
-              return finalText[index];
-            }
-            return chars[Math.floor(Math.random() * chars.length)];
-          })
-          .join("")
-      );
-      
-      if (iterations >= finalText.length) {
-        clearInterval(interval);
-      }
-      
-      iterations += 1 / 3;
-    }, 30);
-  };
-
+  // Defined inside useEffect to avoid complexity or stale closures
+  
   useEffect(() => {
-    // Initial scramble effect for title
-    scrambleText("IEEE SLSYWC 2026");
+    let scrambleInterval;
+    
+    const runScramble = (finalText) => {
+      const chars = "ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789@#$%&";
+      let iterations = 0;
+      
+      clearInterval(scrambleInterval);
+      
+      scrambleInterval = setInterval(() => {
+        setDisplayText(
+          finalText
+            .split("")
+            .map((letter, index) => {
+              if (index < iterations) {
+                return finalText[index];
+              }
+              return chars[Math.floor(Math.random() * chars.length)];
+            })
+            .join("")
+        );
+        
+        if (iterations >= finalText.length) {
+          clearInterval(scrambleInterval);
+        }
+        
+        iterations += 1 / 3;
+      }, 30);
+    };
+
+    // Initial scramble effect for title (with slight delay for hydration)
+    const timer = setTimeout(() => {
+        runScramble("IEEE SLSYWC 2026");
+    }, 100);
 
     // Simulate loading progress
     const progressInterval = setInterval(() => {
@@ -66,10 +74,10 @@ const Preloader = () => {
       });
     }, 150);
 
-    // Rotate through loading texts
+    // Rotate through loading texts faster to ensure visibility
     const textInterval = setInterval(() => {
       setCurrentText((prev) => (prev + 1) % loadingTexts.length);
-    }, 2000);
+    }, 800); // Faster rotation (0.8s) so user sees it change even in 2.5s
 
     // Hide preloader sequence
     const hidePreloader = () => {
@@ -162,6 +170,8 @@ const Preloader = () => {
     }
 
     return () => {
+      clearTimeout(timer);
+      clearInterval(scrambleInterval);
       clearInterval(progressInterval);
       clearInterval(textInterval);
     };

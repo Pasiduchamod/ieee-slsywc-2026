@@ -37,7 +37,13 @@ const Phrase = ({ src }) => {
         <p className="text-[5vh] px-5  text-white">Organized By</p>
 
         <span className="relative h-[7.5vw] aspect-[4/2] overflow-hidden">
-          <Image style={{ objectFit: "contain" }} src={src} alt="image" fill />
+          <Image 
+            style={{ objectFit: "contain" }} 
+            src={src} 
+            alt="image" 
+            fill 
+            sizes="(max-width: 768px) 100vw, 25vw"
+          />
         </span>
       </div>
 
@@ -45,7 +51,13 @@ const Phrase = ({ src }) => {
         <p className="text-[2rem] px-10 text-white">Organized By</p>
 
         <span className="relative h-[7.5vw] aspect-[4/2] overflow-hidden">
-          <Image style={{ objectFit: "contain" }} src={src} alt="image" fill />
+          <Image 
+            style={{ objectFit: "contain" }} 
+            src={src} 
+            alt="image" 
+            fill 
+            sizes="(max-width: 768px) 100vw, 25vw"
+          />
         </span>
       </div>
     </div>
@@ -62,7 +74,7 @@ export default function ParallaxText() {
   });
   return (
     <div className="overflow-hidden bg-black">
-      <div ref={container}>
+      <div ref={container} className="relative">
         <Slide
           src={Picture1}
           direction={"left"}

@@ -22,28 +22,28 @@ const About = () => {
         });
         scrollTriggerInstances = [];
 
-        gsap.set(
-          [".about-stats-item-1", ".about-stats-item-2", ".about-stats-item-3"],
-          {
-            scale: 0,
-          }
-        );
+        // gsap.set(
+        //   [".about-stats-item-1", ".about-stats-item-2", ".about-stats-item-3"],
+        //   {
+        //     scale: 0,
+        //   }
+        // );
 
-        const statsAnimation = gsap.to(
-          [".about-stats-item-1", ".about-stats-item-2", ".about-stats-item-3"],
-          {
-            scale: 1,
-            duration: 1,
-            stagger: 0.1,
-            ease: "power4.out",
-            scrollTrigger: {
-              trigger: ".about-stats",
-              start: "top 50%",
-              toggleActions: "play none none none",
-            },
-          }
-        );
-        scrollTriggerInstances.push(statsAnimation.scrollTrigger);
+        // const statsAnimation = gsap.to(
+        //   [".about-stats-item-1", ".about-stats-item-2", ".about-stats-item-3"],
+        //   {
+        //     scale: 1,
+        //     duration: 1,
+        //     stagger: 0.1,
+        //     ease: "power4.out",
+        //     scrollTrigger: {
+        //       trigger: ".about-stats",
+        //       start: "top 50%",
+        //       toggleActions: "play none none none",
+        //     },
+        //   }
+        // );
+        // scrollTriggerInstances.push(statsAnimation.scrollTrigger);
 
         if (window.innerWidth > 1000) {
           const portraitAnimation = gsap.to(".about-hero-portrait", {
