@@ -154,7 +154,7 @@ const About = () => {
           <div className="about-copy-content relative overflow-hidden">
             {/* Animated Gradient Background (from About section) */}
             <Copy>
-              <h3>
+              <h3 className="py-20">
                 Witness the inspiring experience of an attempt to empower
                 innovations for a better tomorrow with the 15th installment of
                 the largest technical congress in the country. Uniting

@@ -120,6 +120,15 @@ const Hero = () => {
           }
         });
 
+        // Always collapse placeholders since we don't want icons in text
+        placeholders.forEach((placeholder) => {
+             if (placeholder) {
+                 placeholder.style.width = "0px";
+                 placeholder.style.margin = "0px";
+                 placeholder.style.opacity = "0";
+             }
+        });
+
         if (progress <= 0.3) {
           const moveProgress = progress / 0.3;
           const containerMoveY = -window.innerHeight * 0.3 * moveProgress;
@@ -138,15 +147,6 @@ const Hero = () => {
               transform: `translate(-50%, calc(-50% + -50px))`,
               opacity: 0,
             });
-          }
-
-          if (window.duplicateIcons) {
-            window.duplicateIcons.forEach((duplicate) => {
-              if (duplicate.parentNode) {
-                duplicate.parentNode.removeChild(duplicate);
-              }
-            });
-            window.duplicateIcons = null;
           }
 
           gsap.set(animatedIcons, {
@@ -192,15 +192,6 @@ const Hero = () => {
             heroSection.style.backgroundColor = "#050914";
           }
 
-          if (window.duplicateIcons) {
-            window.duplicateIcons.forEach((duplicate) => {
-              if (duplicate.parentNode) {
-                duplicate.parentNode.removeChild(duplicate);
-              }
-            });
-            window.duplicateIcons = null;
-          }
-
           const targetCenterY = window.innerHeight / 2;
           const targetCenterX = window.innerWidth / 2;
           const containerRect = animatedIcons.getBoundingClientRect();
@@ -222,7 +213,8 @@ const Hero = () => {
             gsap.set(icon, { x: 0, y: 0 });
           });
         } else if (progress <= 0.75) {
-          const moveProgress = (progress - 0.6) / 0.15;
+          // Just fade out the icons here, no duplicate icons flying
+          const fadeOutProgress = (progress - 0.6) / 0.15;
 
           gsap.set(heroHeader, {
             transform: `translate(-50%, calc(-50% + -50px))`,
@@ -244,68 +236,13 @@ const Hero = () => {
             x: deltaX,
             y: baseY + deltaY,
             scale: exactScale,
-            opacity: 0,
+            opacity: 1 - fadeOutProgress, // Fade out
           });
 
           iconElements.forEach((icon) => {
             gsap.set(icon, { x: 0, y: 0 });
           });
 
-          if (!window.duplicateIcons) {
-            window.duplicateIcons = [];
-
-            iconElements.forEach((icon, index) => {
-              const duplicate = icon.cloneNode(true);
-              duplicate.className = "duplicate-icon";
-              duplicate.style.position = "absolute";
-              duplicate.style.width = headerIconSize + "px";
-              duplicate.style.height = headerIconSize + "px";
-
-              document.body.appendChild(duplicate);
-              window.duplicateIcons.push(duplicate);
-            });
-          }
-
-          if (window.duplicateIcons) {
-            window.duplicateIcons.forEach((duplicate, index) => {
-              if (index < placeholders.length) {
-                const iconRect = iconElements[index].getBoundingClientRect();
-                const startCenterX = iconRect.left + iconRect.width / 2;
-                const startCenterY = iconRect.top + iconRect.height / 2;
-                const startPageX = startCenterX + window.pageXOffset;
-                const startPageY = startCenterY + window.pageYOffset;
-
-                const targetRect = placeholders[index].getBoundingClientRect();
-                const targetCenterX = targetRect.left + targetRect.width / 2;
-                const targetCenterY = targetRect.top + targetRect.height / 2;
-                const targetPageX = targetCenterX + window.pageXOffset;
-                const targetPageY = targetCenterY + window.pageYOffset;
-
-                const moveX = targetPageX - startPageX;
-                const moveY = targetPageY - startPageY;
-
-                let currentX = 0;
-                let currentY = 0;
-
-                if (moveProgress <= 0.5) {
-                  const verticalProgress = moveProgress / 0.5;
-                  currentY = moveY * verticalProgress;
-                } else {
-                  const horizontalProgress = (moveProgress - 0.5) / 0.5;
-                  currentY = moveY;
-                  currentX = moveX * horizontalProgress;
-                }
-
-                const finalPageX = startPageX + currentX;
-                const finalPageY = startPageY + currentY;
-
-                duplicate.style.left = finalPageX - headerIconSize / 2 + "px";
-                duplicate.style.top = finalPageY - headerIconSize / 2 + "px";
-                duplicate.style.opacity = "1";
-                duplicate.style.display = "flex";
-              }
-            });
-          }
         } else {
           gsap.set(heroHeader, {
             transform: `translate(-50%, calc(-50% + -100px))`,
@@ -315,23 +252,6 @@ const Hero = () => {
           heroSection.style.backgroundColor = "#030710";
 
           gsap.set(animatedIcons, { opacity: 0 });
-
-          if (window.duplicateIcons) {
-            window.duplicateIcons.forEach((duplicate, index) => {
-              if (index < placeholders.length) {
-                const targetRect = placeholders[index].getBoundingClientRect();
-                const targetCenterX = targetRect.left + targetRect.width / 2;
-                const targetCenterY = targetRect.top + targetRect.height / 2;
-                const targetPageX = targetCenterX + window.pageXOffset;
-                const targetPageY = targetCenterY + window.pageYOffset;
-
-                duplicate.style.left = targetPageX - headerIconSize / 2 + "px";
-                duplicate.style.top = targetPageY - headerIconSize / 2 + "px";
-                duplicate.style.opacity = "1";
-                duplicate.style.display = "flex";
-              }
-            });
-          }
 
           textAnimationOrder.forEach((item, randomIndex) => {
             const segmentStart = 0.75 + randomIndex * 0.03;
@@ -351,8 +271,7 @@ const Hero = () => {
             });
           });
         }
-      },
-    });
+      },    });
 
     return () => {
       lenis.destroy();
@@ -607,7 +526,7 @@ const Hero = () => {
           ref={(el) => (textSegmentsRef.current[0] = el)}
           className="text-segment gold-text"
         >
-          Welcome
+          Welcome {" "}
         </span>
         <div
           ref={(el) => (placeholdersRef.current[1] = el)}
@@ -633,7 +552,7 @@ const Hero = () => {
           ref={(el) => (textSegmentsRef.current[3] = el)}
           className="text-segment gold-text"
         >
-          Event of
+          Event of {" "}
         </span>
         <div
           ref={(el) => (placeholdersRef.current[3] = el)}
@@ -643,7 +562,7 @@ const Hero = () => {
           ref={(el) => (textSegmentsRef.current[4] = el)}
           className="text-segment gold-text"
         >
-          IEEE
+          IEEE {" "}
         </span>
         <div
           ref={(el) => (placeholdersRef.current[4] = el)}

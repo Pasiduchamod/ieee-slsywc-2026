@@ -28,7 +28,6 @@ const sponsors = [
   "22.png",
   "23.png",
   "24.png",
-  "25.png",
   "26.png",
   "27.png",
   "28.png",
@@ -90,7 +89,7 @@ function Sponsors() {
           <div className="text-center mb-16">
             <Copy>
               <h2 className="text-4xl md:text-6xl font-bold text-white mb-4">
-                Past Sponsors
+                Past Sponsors & Partners
               </h2>
 
               <div className="w-24 h-1 bg-gradient-to-r from-[#bf953f] via-[#fcf6ba] to-[#b38728] rounded-full mx-auto mt-6"></div>

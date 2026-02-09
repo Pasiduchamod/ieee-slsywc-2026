@@ -18,10 +18,10 @@ const menuLinks = [
   { label: "Home", href: "/" },
   { label: "About", href: "#about" },
   { label: "Theme", href: "#theme" },
-  { label: "Schedule", href: "#schedule" },
+  // { label: "Schedule", href: "#schedule" },
   { label: "Organizers", href: "#organizers" },
   { label: "Past Congress", href: "/past-congress" },
-  { label: "Register", href: "#register" },
+  // { label: "Register", href: "#register" },
 ];
 
 const Navbar = () => {
@@ -111,7 +111,8 @@ const Navbar = () => {
           console.warn("Section not found:", id);
         }
       }, 350); // wait for overlay to close
-    } else if (href === "/") {
+    } else {
+      // For standard navigation (e.g. /, /past-congress), just close the menu
       setIsMenuOpen(false);
     }
   };
