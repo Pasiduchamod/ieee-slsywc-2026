@@ -138,7 +138,7 @@ const WhoWeAre = () => {
   }, []);
 
   return (
-    <section className="whoweare z-20">
+    <section id="about" className="whoweare z-20">
       <div className="whoweare-container">
         <div className="whoweare-scroll">
           <div className="whoweare-header">
