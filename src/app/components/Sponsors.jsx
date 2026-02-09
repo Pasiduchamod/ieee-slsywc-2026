@@ -259,7 +259,7 @@ function Sponsors() {
         }
 
         .animate-marquee-mobile-reverse {
-          animation: marquee-mobile-reverse 10s linear infinite;
+          animation: marquee-mobile-reverse 30s linear infinite;
         }
 
         .sponsors-section {
