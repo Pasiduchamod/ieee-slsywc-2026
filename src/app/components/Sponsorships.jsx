@@ -25,7 +25,7 @@ const sponsorships = [
 
 function Sponsorships() {
   return (
-    <section className="sponsorships-section min-h-[60vh] flex items-center justify-center relative overflow-hidden">
+    <section className="sponsorships-section min-h-[60vh] flex items-center justify-center relative overflow-hidden hidden">
       <div className="sponsorships-glass-card w-full h-full flex items-center justify-center relative z-10">
         {/* Animated Gradient Background (matching other sections) */}
         <div className="absolute inset-0 w-full h-full -z-10">
@@ -70,9 +70,8 @@ function Sponsorships() {
             <div className="wave wave-3"></div>
           </div>
         </div>
-
-        <div className="container mx-auto px-4">
-          {/* Header */}
+{/* Sponsorships */}
+        {/* <div className="container mx-auto px-4">
           <div className="text-center mb-16">
             <Copy>
               <h2 className="text-4xl md:text-6xl font-bold text-white mb-4">
@@ -87,7 +86,7 @@ function Sponsorships() {
           </div>
 
           {/* Desktop Marquee */}
-          <div className="hidden md:block mb-16">
+          {/* <div className="hidden md:block mb-16">
             <div className="relative overflow-hidden">
               <div
                 className="flex animate-marquee"
@@ -105,7 +104,7 @@ function Sponsorships() {
                   </div>
                 ))}
                 {/* Duplicate for seamless loop */}
-                {sponsorships.map((sponsorship, index) => (
+                {/* {sponsorships.map((sponsorship, index) => (
                   <div
                     key={`duplicate-${index}`}
                     className="flex-shrink-0 mx-8 group"
@@ -121,10 +120,10 @@ function Sponsorships() {
                 ))}
               </div>
             </div>
-          </div>
+          </div> */}
 
           {/* Mobile Marquee */}
-          <div className="md:hidden space-y-8">
+          {/* <div className="md:hidden space-y-8">
             <div className="relative overflow-hidden">
               <div
                 className="flex animate-marquee-mobile"
@@ -142,7 +141,7 @@ function Sponsorships() {
                   </div>
                 ))}
                 {/* Duplicate for seamless loop */}
-                {sponsorships.slice(0, 8).map((sponsorship, index) => (
+                {/* {sponsorships.slice(0, 8).map((sponsorship, index) => (
                   <div
                     key={`duplicate-${index}`}
                     className="flex-shrink-0 mx-4 group"
@@ -176,7 +175,7 @@ function Sponsorships() {
                   </div>
                 ))}
                 {/* Duplicate for seamless loop */}
-                {sponsorships.slice(8).map((sponsorship, index) => (
+                {/* {sponsorships.slice(8).map((sponsorship, index) => (
                   <div
                     key={`duplicate-${index}`}
                     className="flex-shrink-0 mx-4 group"
@@ -193,7 +192,7 @@ function Sponsorships() {
               </div>
             </div>
           </div>
-        </div>
+        </div> */}
       </div>
 
       <style jsx>{`
@@ -225,7 +224,7 @@ function Sponsorships() {
         }
 
         .animate-marquee {
-          animation: marquee 20s linear infinite;
+          animation: marquee 30s linear infinite;
         }
 
         .animate-marquee-mobile {
