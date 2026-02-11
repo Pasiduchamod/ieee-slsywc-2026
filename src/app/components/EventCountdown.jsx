@@ -99,10 +99,10 @@ const EventCountdown = () => {
       <div className="container relative z-10 mx-auto px-4">
         <div className="flex flex-col items-center mb-16">
           <Copy>
-            <h2 className="text-4xl md:text-6xl font-bold text-center mb-4 text-white drop-shadow-[0_2px_8px_rgba(0,236,236,0.3)]">
+            <h2 className="text-3xl md:text-5xl font-bold text-center mb-4 text-white drop-shadow-[0_2px_8px_rgba(255,191,71,0.3)]">
               {isEventStarted
                 ? "Event is Live!"
-                : "IEEE SL SYWC 2026 Starts In"}
+                : "IEEE SLSYWC 2026 Starts In"}
             </h2>
           </Copy>
           <div className="w-24 h-1 bg-gradient-to-r from-[#ffcb40] to-[#0f6962] rounded-full shadow-lg mb-8"></div>
@@ -201,10 +201,10 @@ const EventCountdown = () => {
                 />
               </svg>
             </div>
-            <h3 className="text-sm font-semibold text-white/60 uppercase tracking-widest mb-2">
+            <h3 className="info-label">
               Event Dates
             </h3>
-            <p className="text-xl text-white font-bold group-hover:text-[#ffcb40] transition-colors">18,19,20 September 2026</p>
+            <p className="info-detail gold-text">18,19,20 September 2026</p>
           </div>
 
           <div className="event-info-card group">
@@ -229,8 +229,8 @@ const EventCountdown = () => {
                 />
               </svg>
             </div>
-            <h3 className="text-sm font-semibold text-white/60 uppercase tracking-widest mb-2">Location</h3>
-            <p className="text-xl text-white font-bold group-hover:text-[#ffcb40] transition-colors">Colombo, Sri Lanka</p>
+            <h3 className="info-label">Location</h3>
+            <p className="info-detail gold-text">Colombo<br></br>Sri Lanka</p>
           </div>
 
           <div className="event-info-card group">
@@ -249,10 +249,10 @@ const EventCountdown = () => {
                 />
               </svg>
             </div>
-            <h3 className="text-sm font-semibold text-white/60 uppercase tracking-widest mb-2">
+            <h3 className="info-label">
               Expected Attendance
             </h3>
-            <p className="text-xl text-white font-bold group-hover:text-[#ffcb40] transition-colors">250+ Delegates</p>
+            <p className="info-detail gold-text">250+ Delegates</p>
           </div>
         </div>
 
@@ -337,6 +337,29 @@ const EventCountdown = () => {
           border-color: rgba(255, 203, 64, 0.2);
           background: rgba(3, 7, 16, 0.8);
           box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
+        }
+
+        .info-label {
+          font-size: 14px !important;
+          font-weight: 600 !important;
+          color: rgba(255, 255, 255, 0.4) !important;
+          text-transform: uppercase !important;
+          letter-spacing: 0.25em !important;
+          margin-bottom: 0.5rem !important;
+          line-height: 1 !important;
+        }
+
+        .info-detail {
+          font-size: 1.5rem !important;
+          font-weight: 800 !important;
+          transition: color 0.3s ease !important;
+          line-height: 1.2 !important;
+        }
+
+        @media (min-width: 768px) {
+          .info-detail {
+            font-size: 2rem !important;
+          }
         }
 
         .info-icon {

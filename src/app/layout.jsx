@@ -3,6 +3,7 @@ import "./globals.css";
 import Navbar from "./components/Navbar/Navbar";
 import Preloader from "./components/Preloader/Preloader";
 import { Analytics } from "@vercel/analytics/next";
+import SmoothScroll from "./components/SmoothScroll";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -29,12 +30,14 @@ export default function RootLayout({ children }) {
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
-        <Preloader />
-        <div className="main-bg">
-          <Navbar />
-          {children}
-          <Analytics />
-        </div>
+        <SmoothScroll>
+          <Preloader />
+          <div className="main-bg">
+            <Navbar />
+            {children}
+            <Analytics />
+          </div>
+        </SmoothScroll>
       </body>
     </html>
   );

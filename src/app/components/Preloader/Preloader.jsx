@@ -169,13 +169,39 @@ const Preloader = () => {
       setTimeout(checkIfLoaded, 200);
     }
 
+    // Lock scroll when preloader is active
+    if (isLoading) {
+      window.dispatchEvent(new CustomEvent("scroll-lock", { detail: { locked: true } }));
+      document.documentElement.style.setProperty("overflow", "hidden", "important");
+      document.documentElement.style.setProperty("height", "100%", "important");
+      document.body.style.setProperty("overflow", "hidden", "important");
+      document.body.style.setProperty("height", "100%", "important");
+    }
+
     return () => {
       clearTimeout(timer);
       clearInterval(scrambleInterval);
       clearInterval(progressInterval);
       clearInterval(textInterval);
+      // Ensure scroll is unlocked when component unmounts
+      window.dispatchEvent(new CustomEvent("scroll-lock", { detail: { locked: false } }));
+      document.documentElement.style.setProperty("overflow", "");
+      document.documentElement.style.setProperty("height", "");
+      document.body.style.setProperty("overflow", "");
+      document.body.style.setProperty("height", "");
     };
   }, []);
+
+  // Update scroll lock when isLoading changes
+  useEffect(() => {
+    if (!isLoading) {
+      window.dispatchEvent(new CustomEvent("scroll-lock", { detail: { locked: false } }));
+      document.documentElement.style.setProperty("overflow", "");
+      document.documentElement.style.setProperty("height", "");
+      document.body.style.setProperty("overflow", "");
+      document.body.style.setProperty("height", "");
+    }
+  }, [isLoading]);
 
   if (!isLoading) {
     return null;
