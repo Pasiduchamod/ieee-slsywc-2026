@@ -3,7 +3,6 @@
 import { useEffect, useRef, useState } from "react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
-import Lenis from "lenis";
 import { useGSAP } from "@gsap/react";
 import Copy from "./Copy/Copy";
 import Fireworks from "./Fireworks";
@@ -28,13 +27,6 @@ const Hero = () => {
     if (!isClient) return;
 
     gsap.registerPlugin(ScrollTrigger);
-
-    const lenis = new Lenis();
-    lenis.on("scroll", ScrollTrigger.update);
-    gsap.ticker.add((time) => {
-      lenis.raf(time * 1000);
-    });
-    gsap.ticker.lagSmoothing(0);
 
     const animatedIcons = animatedIconsRef.current;
     const iconElements = iconElementsRef.current;
@@ -274,7 +266,6 @@ const Hero = () => {
       },    });
 
     return () => {
-      lenis.destroy();
       ScrollTrigger.getAll().forEach((trigger) => trigger.kill());
     };
   }, [isClient]);
@@ -361,27 +352,27 @@ const Hero = () => {
           <div className="flex absolute bottom-5 z-10 px-5 gap-2">
             <div className="animated-icon">
               <div className="">
-                <img src="/hero/1.jpg" className="rounded-[6rem]" alt="" />
+                <img src="/hero/1.jpeg" className="rounded-[6rem]" alt="" />
               </div>
             </div>
             <div className="animated-icon">
               <div className="">
-                <img src="/hero/2.jpg" className="rounded-[6rem]" alt="" />
+                <img src="/hero/2.jpeg" className="rounded-[6rem]" alt="" />
               </div>
             </div>
             <div className="animated-icon">
               <div className="">
-                <img src="/hero/3.jpg" className="rounded-[6rem]" alt="" />
+                <img src="/hero/3.jpeg" className="rounded-[6rem]" alt="" />
               </div>
             </div>
             <div className="animated-icon">
               <div className="">
-                <img src="/hero/4.jpg" className="rounded-[6rem]" alt="" />
+                <img src="/hero/4.jpeg" className="rounded-[6rem]" alt="" />
               </div>
             </div>
             <div className="animated-icon">
               <div className="">
-                <img src="/hero/5.jpg" className="rounded-[6rem]" alt="" />
+                <img src="/hero/5.jpeg" className="rounded-[6rem]" alt="" />
               </div>
             </div>
           </div>
@@ -481,7 +472,7 @@ const Hero = () => {
           className="animated-icon"
         >
           <div className="icon-gradient-border">
-            <img src="/hero/1.jpg" className="rounded-[6rem]" alt="" />
+            <img src="/hero/1.jpeg" className="rounded-[6rem]" alt="" />
           </div>
         </div>
         <div
@@ -489,7 +480,7 @@ const Hero = () => {
           className="animated-icon"
         >
           <div className="icon-gradient-border">
-            <img src="/hero/2.jpg" className="rounded-[6rem]" alt="" />
+            <img src="/hero/2.jpeg" className="rounded-[6rem]" alt="" />
           </div>
         </div>
         <div
@@ -497,7 +488,7 @@ const Hero = () => {
           className="animated-icon"
         >
           <div className="icon-gradient-border">
-            <img src="/hero/3.jpg" className="rounded-[6rem]" alt="" />
+            <img src="/hero/3.jpeg" className="rounded-[6rem]" alt="" />
           </div>
         </div>
         <div
@@ -505,7 +496,7 @@ const Hero = () => {
           className="animated-icon"
         >
           <div className="icon-gradient-border">
-            <img src="/hero/4.jpg" className="rounded-[6rem]" alt="" />
+            <img src="/hero/4.jpeg" className="rounded-[6rem]" alt="" />
           </div>
         </div>
         <div
@@ -513,7 +504,7 @@ const Hero = () => {
           className="animated-icon"
         >
           <div className="icon-gradient-border">
-            <img src="/hero/5.jpg" className="rounded-[6rem]" alt="" />
+            <img src="/hero/5.jpeg" className="rounded-[6rem]" alt="" />
           </div>
         </div>
       </div>
