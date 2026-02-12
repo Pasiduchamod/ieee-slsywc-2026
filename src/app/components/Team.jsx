@@ -14,6 +14,13 @@ const teamData = {
   ],
   viceChair: [
     {
+      img: "Linaya Gunawardena.jpg",
+      post: "Secretary",
+      pillar: "",
+      name: "Ms. Linaya Gunawardena",
+      uni: "NSBM",
+    },
+    {
       img: "Sasindu Abhayarathna.jpg",
       post: "Vice Chair ",
       pillar: "Program & Delivery",
@@ -33,13 +40,6 @@ const teamData = {
       pillar: "Public Visibility",
       name: "Ms. Hasini Sarathchandra",
       uni: "UWU",
-    },
-    {
-      img: "Linaya Gunawardena.jpg",
-      post: "Secretary",
-      pillar: "",
-      name: "Ms. Linaya Gunawardena",
-      uni: "NSBM",
     },
   ],
   Team: [

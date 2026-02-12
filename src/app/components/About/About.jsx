@@ -76,10 +76,6 @@ const About = () => {
                         alt="Theme Portrait" 
                         className="w-full h-auto object-contain" 
                     />
-                    {/* Decorative Corner */}
-                    <div className="absolute bottom-4 right-4 text-[#b4860b] font-mono text-xs tracking-widest bg-black/80 px-2 py-1 animate-pulse">
-                        SLSYWC.V.15.0
-                    </div>
                 </div>
             </div>
 
