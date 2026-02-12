@@ -54,7 +54,7 @@ const About = () => {
       <div className="container mx-auto px-6">
         
         {/* Section Header - Full Width */}
-        <div className="mb-12 md:mb-20 premium-text-reveal">
+        <div className="mb-8 md:mb-20 premium-text-reveal">
             <div className="flex items-center gap-4 mb-4">
                 <span className="w-12 h-[1px] bg-[#b4860b]"></span>
                 <span className="text-[#b4860b] text-sm font-mono tracking-widest uppercase">System Initialization</span>
