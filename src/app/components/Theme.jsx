@@ -112,7 +112,7 @@ const Theme = () => {
             <Copy>
               <h2>
                 The IEEE Sri Lanka Section Students | Young Professionals |
-                Women in Engineering (IEEE SL SYW) Congress is the flagship
+                Women in Engineering (IEEE SLSYW) Congress is the flagship
                 event organized by the IEEE Sri Lanka Section. This event serves
                 as the largest technical congress bridging the gap between our
                 nation and the global community, whilst honouring the
@@ -146,7 +146,7 @@ const Theme = () => {
               <img
                 src="/main-logo.svg"
                 className="object-contain w-32 h-32 md:w-48 md:h-48"
-                alt="IEEE SL SYW Congress Logo"
+                alt="IEEE SLSYW Congress Logo"
               />
             </div>
           </div>
@@ -167,7 +167,7 @@ const Theme = () => {
               <Copy>
                 <h3 className="mission-intro-desc">
                   The IEEE Sri Lanka Section Students | Young Professionals |
-                  Women in Engineering (IEEE SL SYW) Congress is the flagship
+                  Women in Engineering (IEEE SLSYW) Congress is the flagship
                   event organized by the IEEE Sri Lanka Section. This event
                   serves as the largest technical congress bridging the gap
                   between our nation and the global community, whilst honouring
@@ -176,7 +176,7 @@ const Theme = () => {
                 </h3>
                 <br />
                 <h3 className="mission-intro-desc">
-                  IEEE SL SYW Congress brings together volunteers from across
+                  IEEE SLSYW Congress brings together volunteers from across
                   the country, spanning various entities, to foster bonds and
                   provide networking opportunities with professionals and
                   industry experts worldwide.

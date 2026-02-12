@@ -208,7 +208,7 @@
 
 **22. What Encouraged You** (Paragraph - Required)
 
-- Question: "We would like to know what encouraged you to take part in IEEE SL SYW Congress 2026."
+- Question: "We would like to know what encouraged you to take part in IEEE SLSYW Congress 2026."
 - Required: Yes (only if ExCo = "No" and Foreign = "No")
 
 **23. Previous Participations** (Checkboxes - Required)
@@ -237,7 +237,7 @@
 
 **25. What Encouraged You (Foreign)** (Paragraph - Required)
 
-- Question: "We would like to know what encouraged you to take part in IEEE SL SYW Congress 2026."
+- Question: "We would like to know what encouraged you to take part in IEEE SLSYW Congress 2026."
 - Required: Yes (only if Foreign = "Yes")
 
 **26. Volunteering Experience (Foreign)** (Paragraph - Required)
@@ -272,7 +272,7 @@
 
 **29. Consent for Information Sharing** (Checkboxes - Required)
 
-- Question: "I give my consent for IEEE SL SYW Congress 2026 to share my information with partners."
+- Question: "I give my consent for IEEE SLSYW Congress 2026 to share my information with partners."
 - Options:
   - I Agree.
 - Required: Yes

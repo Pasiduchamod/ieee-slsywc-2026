@@ -230,7 +230,7 @@ const EventCountdown = () => {
               </svg>
             </div>
             <h3 className="info-label">Location</h3>
-            <p className="info-detail gold-text">Colombo<br></br>Sri Lanka</p>
+            <p className="info-detail gold-text"> Colombo,<br></br>Sri Lanka</p>
           </div>
 
           <div className="event-info-card group">

@@ -9,7 +9,7 @@ import NeuralNetwork from "../components/NeuralNetwork";
 const editions = [
   {
     year: "2025",
-    fullTitle: "IEEE SL SYW Congress 2025",
+    fullTitle: "IEEE SLSYW Congress 2025",
     theme: "Innovation for Sustainability",
     venue: "Jie Jie Beach Hotel, Panadura",
     description:
@@ -21,7 +21,7 @@ const editions = [
   },
   {
     year: "2024",
-    fullTitle: "IEEE SL SYW Congress 2024",
+    fullTitle: "IEEE SLSYW Congress 2024",
     theme: "Revolutionizing the Digital Landscape",
     venue: "Hotel Sudu Araliya, Polonnaruwa",
     description:
@@ -31,7 +31,7 @@ const editions = [
   },
   {
     year: "2023",
-    fullTitle: "IEEE SL SYW Congress 2023",
+    fullTitle: "IEEE SLSYW Congress 2023",
     theme: "Dreams Conquer Boundaries",
     venue: "Carolina Beach Hotel, Chilaw",
     description:
@@ -41,7 +41,7 @@ const editions = [
   },
   {
     year: "2022",
-    fullTitle: "IEEE SL SYW Congress 2022",
+    fullTitle: "IEEE SLSYW Congress 2022",
     theme: "Rebuild for Resilience",
     venue: "Citrus Waskaduwa, Kalutara",
     description:
@@ -51,7 +51,7 @@ const editions = [
   },
   {
     year: "2021",
-    fullTitle: "IEEE SL SYW Congress 2021",
+    fullTitle: "IEEE SLSYW Congress 2021",
     theme: "Resilience in Rebuilding",
     venue: "Virtual Event",
     description:
@@ -61,7 +61,7 @@ const editions = [
   },
   {
     year: "2020",
-    fullTitle: "IEEE SL SYW Congress 2020",
+    fullTitle: "IEEE SLSYW Congress 2020",
     theme: "Rebuilding with Resilience",
     venue: "Virtual Event",
     description:
@@ -71,7 +71,7 @@ const editions = [
   },
   {
     year: "2019",
-    fullTitle: "IEEE SL SYW Congress 2019",
+    fullTitle: "IEEE SLSYW Congress 2019",
     theme: "Disruptive Innovation for a Green Future",
     venue: "Wayamba University of Sri Lanka",
     description:
@@ -81,7 +81,7 @@ const editions = [
   },
   {
     year: "2018",
-    fullTitle: "IEEE SL SYW Congress 2018",
+    fullTitle: "IEEE SLSYW Congress 2018",
     theme: "Augmenting into Digital Dimension",
     venue: "Sri Lanka Technological Campus, Padukka",
     description:
@@ -91,7 +91,7 @@ const editions = [
   },
   {
     year: "2017",
-    fullTitle: "IEEE SL SYW Congress 2017",
+    fullTitle: "IEEE SLSYW Congress 2017",
     theme: "Vision Beyond Technology",
     venue: "Sabaragamuwa University",
     description:
@@ -101,11 +101,11 @@ const editions = [
   },
   {
     year: "2016",
-    fullTitle: "IEEE SL SYW Congress 2016",
+    fullTitle: "IEEE SLSYW Congress 2016",
     theme: "Expanding Horizons",
     venue: "Wayamba University of Sri Lanka",
     description:
-      "The 6th IEEE SL SYW Congress took place from 25th to 27th November 2016. The Congress provided leadership and professional development sessions, workshops, panel discussions and networking opportunities for student members, young professionals and WIE volunteers. Activities included a lecture on “Powering Sri Lanka in the Upcoming Decade”, the charity initiative “Make Them Smile” and recognition of students and teams for global and regional competition achievements, reinforcing technical skills, social responsibility and collaboration among participants.",
+      "The 6th IEEE SLSYW Congress took place from 25th to 27th November 2016. The Congress provided leadership and professional development sessions, workshops, panel discussions and networking opportunities for student members, young professionals and WIE volunteers. Activities included a lecture on “Powering Sri Lanka in the Upcoming Decade”, the charity initiative “Make Them Smile” and recognition of students and teams for global and regional competition achievements, reinforcing technical skills, social responsibility and collaboration among participants.",
     image: "/previous logos/2016.jpeg",
     textGradient: "bg-gradient-to-r from-[#FDC830] to-[#F37335]",
   },
@@ -121,31 +121,31 @@ const editions = [
   },
   {
     year: "2014",
-    fullTitle: "IEEE SL SYW Congress 2014",
+    fullTitle: "IEEE SLSYW Congress 2014",
     theme: "Innovation and Leadership",
     venue: "University of Colombo School of Computing",
     description:
-      "The third annual IEEE SL SYW Congress was held on 30th November 2014. The Congress featured keynote speeches, interactive workshops, and panel discussions for students, young professionals, and WIE members. Approximately 300 delegates participated, engaging in technical learning, leadership development, and cross-disciplinary networking across Sri Lanka.",
+      "The third annual IEEE SLSYW Congress was held on 30th November 2014. The Congress featured keynote speeches, interactive workshops, and panel discussions for students, young professionals, and WIE members. Approximately 300 delegates participated, engaging in technical learning, leadership development, and cross-disciplinary networking across Sri Lanka.",
     image: "/previous logos/2014.jpeg",
     textGradient: "bg-gradient-to-r from-[#1A2980] to-[#26D0CE]",
   },
   {
     year: "2013",
-    fullTitle: "IEEE SL SYW Congress 2013",
+    fullTitle: "IEEE SLSYW Congress 2013",
     theme: "Growth and Collaboration",
     venue: "Sri Lanka",
     description:
-      "The 2013 IEEE SL SYW Congress, continued the momentum of the inaugural Congress by providing Sri Lanka’s student members, young professionals and WIE volunteers with leadership development, technical knowledge sharing and networking opportunities. With the theme of “Growth and Collaboration”, the event strengthened collaboration among student branches and encouraged active participation in IEEE programs throughout the country.",
+      "The 2013 IEEE SLSYW Congress, continued the momentum of the inaugural Congress by providing Sri Lanka’s student members, young professionals and WIE volunteers with leadership development, technical knowledge sharing and networking opportunities. With the theme of “Growth and Collaboration”, the event strengthened collaboration among student branches and encouraged active participation in IEEE programs throughout the country.",
     image: "/previous logos/2013.jpeg",
     textGradient: "bg-gradient-to-r from-[#0052D4] to-[#65C7F7]",
   },
   {
     year: "2012",
-    fullTitle: "IEEE SL SYW Congress 2012",
+    fullTitle: "IEEE SLSYW Congress 2012",
     theme: "Inaugural Congress",
     venue: "Sri Lanka",
     description:
-      "The inaugural IEEE SL SYW Congress took place in 2012, establishing the annual flagship event for students, young professionals, and WIE volunteers. The Congress focused on leadership development, professional skills and raising awareness of IEEE programs in Sri Lanka. Workshops, panel discussions and cross-university networking opportunities were held, with hundreds of student and young professional members participating from across the country.",
+      "The inaugural IEEE SLSYW Congress took place in 2012, establishing the annual flagship event for students, young professionals, and WIE volunteers. The Congress focused on leadership development, professional skills and raising awareness of IEEE programs in Sri Lanka. Workshops, panel discussions and cross-university networking opportunities were held, with hundreds of student and young professional members participating from across the country.",
     textGradient: "bg-gradient-to-r from-[#ffcb40] via-[#fcf6ba] to-[#b4860b]",
   },
   {

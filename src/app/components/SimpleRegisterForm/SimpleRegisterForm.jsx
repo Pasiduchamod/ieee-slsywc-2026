@@ -848,7 +848,7 @@ const SimpleRegisterForm = () => {
                 checked={formData.consent === "I Agree"}
                 onChange={handleInputChange}
               />
-              I give my consent for IEEE SL SYW Congress 2026 to share my
+              I give my consent for IEEE SLSYW Congress 2026 to share my
               information with partners.
             </label>
             {errors.consent && (

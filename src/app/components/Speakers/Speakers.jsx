@@ -106,7 +106,7 @@ const speakersData = [
   {
     id: 17,
     name: "Mr. Uvindu Kodikara",
-    occupation: "Chair, IEEE SL SYW Congress 2026",
+    occupation: "Chair, IEEE SLSYW Congress 2026",
     image: "/speakers3/17.png",
   },
   {
@@ -119,7 +119,7 @@ const speakersData = [
   {
     id: 19,
     name: "Ms. Sanjana Attanayake",
-    occupation: "Secretary, IEEE SL SYW Congress 2026",
+    occupation: "Secretary, IEEE SLSYW Congress 2026",
     image: "/speakers3/18.png",
   },
 ];
@@ -135,7 +135,7 @@ const emceesAndModerators = [
   {
     id: 2,
     name: "Linaya Gunawardena",
-    occupation: "Member, IEEE SL SYW Congress 2026",
+    occupation: "Member, IEEE SLSYW Congress 2026",
     image: "/speakers3/M2.png",
   },
   {
