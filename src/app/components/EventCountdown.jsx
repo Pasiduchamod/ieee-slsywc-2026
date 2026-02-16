@@ -105,7 +105,7 @@ const EventCountdown = () => {
                 : "IEEE SLSYWC 2026 Starts In"}
             </h2>
           </Copy>
-          <div className="w-24 h-1 bg-gradient-to-r from-[#ffcb40] to-[#0f6962] rounded-full shadow-lg mb-8"></div>
+          <div className="w-24 h-1 bg-gradient-to-r from-[#bf953f] via-[#fcf6ba] to-[#b38728] rounded-full shadow-lg mb-8"></div>
           <p className="text-xl text-center text-white/80 mb-12 max-w-2xl">
             {isEventStarted
               ? "The IEEE SLSYWC 2026 is now happening! Join us for an incredible experience."
