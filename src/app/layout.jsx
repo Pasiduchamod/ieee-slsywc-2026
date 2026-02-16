@@ -20,7 +20,7 @@ export const metadata = {
   description: `IEEE Sri Lanka Section Students | Young Professionals | Women in
             Engineering Congress 2026`,
   icons: {
-    icon: ["/logo-ico.svg"],
+    icon: ["/logo-ico.png"],
   },
 };
 

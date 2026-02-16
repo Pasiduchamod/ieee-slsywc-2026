@@ -116,3 +116,10 @@
     font-size: 35vw;
   }
 }
+
+/* Performance Override for Large Text */
+.whoweare .whoweare-header .gold-text {
+    animation: none !important;
+    filter: none !important;
+    background-size: 100% auto; /* Reset size if needed */
+}
