@@ -8,7 +8,7 @@ import "./Preloader.css";
 const Preloader = () => {
   const [isLoading, setIsLoading] = useState(true);
   const [progress, setProgress] = useState(0);
-  const [displayText, setDisplayText] = useState("IEEE SLSYWC 2026");
+  const [displayText, setDisplayText] = useState("IEEE Sri lanka Section Students | Young Professionals | Women in Engineering Congress 2026");
   const [currentText, setCurrentText] = useState(0);
   const preloaderRef = useRef(null);
   const curtainLeftRef = useRef(null);
@@ -60,11 +60,11 @@ const Preloader = () => {
 
     // Initial scramble effect for title (with slight delay for hydration)
     const timer = setTimeout(() => {
-        runScramble("IEEE SLSYWC 2026");
+        runScramble("IEEE Sri lanka Section Students | Young Professionals | Women in Engineering Congress 2026");
     }, 100);
 
     // Simulate loading progress
-    const progressInterval = setInterval(() => {
+    const progressInterval = setInterval(() => {  
       setProgress((prev) => {
         if (prev >= 100) {
           clearInterval(progressInterval);
@@ -251,7 +251,7 @@ const Preloader = () => {
         {/* Title with Typing Effect */}
         <div className="title-container">
           <h1 className="main-title">
-            <span className="block text-4xl md:text-6xl font-black tracking-tighter text-white mb-2 font-mono">
+            <span className="block text-3xl md:text-3xl font-black tracking-tighter text-white mb-2 font-mono">
               {displayText}
             </span>
           </h1>

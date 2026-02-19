@@ -80,13 +80,13 @@ const teamData = {
       uni: "UOM",
     },
     {
-      img: "Hirusha suhan.jpg",
+      img: "Hirusha Suhan.jpg",
       post: "Public Visibility",
       name: "Mr. Hirusha suhan",
       uni: "UWU",
     },
     {
-      img: "Narada chathuranga.jpg",
+      img: "Narada Chathuranga.jpg",
       post: "Public Visibility",
       name: "Mr. Narada chathuranga",
       uni: "UOR",
