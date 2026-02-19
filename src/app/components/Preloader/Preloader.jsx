@@ -8,7 +8,7 @@ import "./Preloader.css";
 const Preloader = () => {
   const [isLoading, setIsLoading] = useState(true);
   const [progress, setProgress] = useState(0);
-  const [displayText, setDisplayText] = useState("IEEE Sri lanka Section Students | Young Professionals | Women in Engineering Congress 2026");
+  const [displayText, setDisplayText] = useState("IEEE Sri Lanka Section Students | Young Professionals | Women in Engineering Congress 2026");
   const [currentText, setCurrentText] = useState(0);
   const preloaderRef = useRef(null);
   const curtainLeftRef = useRef(null);
