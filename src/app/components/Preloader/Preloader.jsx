@@ -60,7 +60,7 @@ const Preloader = () => {
 
     // Initial scramble effect for title (with slight delay for hydration)
     const timer = setTimeout(() => {
-        runScramble("IEEE Sri lanka Section Students | Young Professionals | Women in Engineering Congress 2026");
+        runScramble("IEEE Sri Lanka Section Students | Young Professionals | Women in Engineering Congress 2026");
     }, 100);
 
     // Simulate loading progress
@@ -251,7 +251,7 @@ const Preloader = () => {
         {/* Title with Typing Effect */}
         <div className="title-container">
           <h1 className="main-title">
-            <span className="block text-3xl md:text-3xl font-black tracking-tighter text-white mb-2 font-mono">
+            <span className="block text-base md:text-3xl font-black tracking-tighter text-white mb-2 font-mono">
               {displayText}
             </span>
           </h1>
