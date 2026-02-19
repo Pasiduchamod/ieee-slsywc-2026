@@ -204,7 +204,7 @@ const EventCountdown = () => {
             <h3 className="info-label">
               Event Dates
             </h3>
-            <p className="info-detail gold-text">18,19,20 September 2026</p>
+            <p className="info-detail gold-text">18, 19, 20 September 2026</p>
           </div>
 
           <div className="event-info-card group">

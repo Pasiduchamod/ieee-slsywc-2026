@@ -275,10 +275,10 @@ const Hero = () => {
     return (
       <section id="home" className="hero">
         <div className="hero-header">
-          <h1 className="!text-6xl md:!text-[10rem] font-extrabold text-center gold-text mb-2 whitespace-nowrap">SLSYWC '26</h1>
+          <h1 className="!text-6xl md:!text-[10rem] font-extrabold text-center gold-text mb-2 whitespace-nowrap">IEEE Sri Lanka Section Students | Young Professionals | Women in
+            Engineering Congress 2026</h1>
           <p>
-            IEEE Sri Lanka Section Students | Young Professionals | Women in
-            Engineering Congress 2026
+            SLSYWC '26
           </p>
         </div>
       </section>
@@ -340,13 +340,20 @@ const Hero = () => {
           </div>
           <div className="hero-header z-10">
             <h1
-              className="!text-6xl md:!text-[10rem] font-extrabold text-center gold-text mb-2 whitespace-nowrap"
+              className="!text-3xl md:!text-[3rem] font-extrabold text-center gold-text mb-2 whitespace-nowrap"
             >
-              SLSYWC '26
+              IEEE Sri Lanka Section 
+          <br />
+          Students
+          <br />
+           Young Professionals 
+           <br />
+           Women in Engineering 
+          <br />
+          Congress 2026
             </h1>
             <p className="text-xl px-8 md:text-2xl font-medium text-white/80 mt-4 text-center">
-              IEEE Sri Lanka Section Students | Young Professionals | Women in
-              Engineering Congress 2026
+              SLSYWC '26
             </p>
           </div>
           <div className="flex absolute bottom-5 z-10 px-5 gap-2">
@@ -457,13 +464,16 @@ const Hero = () => {
       <AnimatedBackground />
       <div ref={heroHeaderRef} className="hero-header z-10 flex flex-col items-center !w-full">
         <h1
-          className="main-title !text-6xl md:!text-[10rem] font-extrabold text-center gold-text mb-2 opacity-0 whitespace-nowrap" // Reduced to optimal size
+          className="main-title !text-6xl md:!text-[3rem] font-extrabold text-center gold-text mb-2 opacity-0 whitespace-nowrap" // Reduced to optimal size
         >
-          SLSYWC '26
+          IEEE Sri Lanka Section 
+          <br />
+          Students | Young Professionals | Women in Engineering 
+          <br />
+          Congress 2026
         </h1>
         <p className="text-xl md:text-2xl font-medium text-white/80 text-center max-w-4xl px-4">
-          IEEE Sri Lanka Section Students | Young Professionals | Women in
-          Engineering Congress 2026
+          SLSYWC '26
         </p>
       </div>
       <div ref={animatedIconsRef} className="animated-icons z-10">
