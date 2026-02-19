@@ -5,7 +5,7 @@ import NeuralNetwork from "../NeuralNetwork";
 const explosionImageCount = 10;
 const explosionImagePaths = Array.from(
   { length: explosionImageCount },
-  (_, i) => `/hero/${i + 1}.jpg`
+  (_, i) => `/hero/${i + 1}.jpeg`
 );
 
 export default function Footer() {

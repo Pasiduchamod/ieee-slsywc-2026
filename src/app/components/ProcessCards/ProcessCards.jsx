@@ -130,19 +130,19 @@ const processCardsData = [
   {
     index: "01",
     title: "26th Sep 2026",
-    image: "/hero/1.jpg",
+    image: "/hero/1.jpeg",
     schedule: schedule1,
   },
   {
     index: "02",
     title: "27th Sep 2026",
-    image: "/hero/2.jpg",
+    image: "/hero/2.jpeg",
     schedule: schedule2,
   },
   {
     index: "03",
     title: "28th Sep 2026",
-    image: "/hero/3.jpg",
+    image: "/hero/3.jpeg",
     schedule: schedule3,
   },
 ];
