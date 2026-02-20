@@ -52,7 +52,7 @@ const editions = [
   {
     year: "2021",
     fullTitle: "IEEE SLSYW Congress 2021",
-    theme: "Resilience in Rebuilding",
+    theme: "Unite To Survive Fight to Thrive",
     venue: "Virtual Event",
     description:
       "The year marked the 10th anniversary of the congress, commemorating a decade of excellence and empowering the engineering community in Sri Lanka. The event was held virtually amidst the Covid-19 pandemic, re-energizing the section’s volunteer spirit.",
