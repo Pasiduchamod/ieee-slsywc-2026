@@ -35,7 +35,7 @@ const teamData = {
       uni: "UOM",
     },
     {
-      img: "Hasini Sarathchandra.jpeg",
+      img: "Hasini Sarathchandra.jpg",
       post: "Vice Chair ",
       pillar: "Public Visibility",
       name: "Ms. Hasini Sarathchandra",
@@ -86,7 +86,7 @@ const teamData = {
       uni: "UWU",
     },
     {
-      img: "Narada chathuranga.jpg",
+      img: "Narada chathuranga.jpeg",
       post: "Public Visibility",
       name: "Mr. Narada Chathuranga",
       uni: "UOR",
