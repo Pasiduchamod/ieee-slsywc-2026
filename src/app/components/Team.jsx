@@ -92,7 +92,7 @@ const teamData = {
       uni: "UOR",
     },
     {
-      img: "Manura Anuhas.jpg",
+      img: "Manura Anuhas.jpeg",
       post: "Public Visibility",
       name: "Mr. Manura Anuhas",
       uni: "SLTC",
